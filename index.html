@@ -1,20 +1,15 @@
-html
 <!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Soft Vision | Премиум Хидрофобно Покритие за Автостъкла</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- ==========================================================================
-         META PIXEL CODE (FACEBOOK & INSTAGRAM ADS)
-         ========================================================================== -->
+    <!-- META PIXEL CODE -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -26,13 +21,10 @@ html
         'https://connect.facebook.net/en_US/fbevents.js');
 
         fbq('consent', 'revoke');
-
-        // ЗАМЕНЕТЕ 'YOUR_PIXEL_ID' С ВАШИЯ РЕАЛЕН PIXEL ID ОТ META:
         fbq('init', 'YOUR_PIXEL_ID');
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none" 
-             src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
     </noscript>
 
     <style>
@@ -42,1687 +34,336 @@ html
             --bg-card-hover: #111a2b;
             --blue-glow: #00b4d8;
             --blue-electric: #0077b6;
-            --blue-cyan: #38bdf8;
             --accent-green: #10b981;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --gold: #f59e0b;
-
-            /* КОНТРАСТНИ ЗЛАТНО-ОРАНЖЕВИ CTA БУТОНИ */
             --cta-gradient: linear-gradient(135deg, #ff8c00, #ff5400);
             --cta-gradient-hover: linear-gradient(135deg, #ffa024, #ff6a1a);
             --cta-glow: rgba(255, 120, 0, 0.45);
-            --cta-glow-hover: rgba(255, 140, 0, 0.75);
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; padding-bottom: 70px; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding-bottom: 60px;
-        }
-
-        /* --- ГОРНА МАРКЕТИНГОВА ЛЕНТА --- */
         .top-trust-bar {
             background: linear-gradient(90deg, #001f3f, #003366, #001f3f);
-            color: #d1ecf1;
-            font-size: 12px;
-            font-weight: 700;
-            text-align: center;
-            padding: 8px 15px;
-            letter-spacing: 0.8px;
-            border-bottom: 1px solid rgba(0, 180, 216, 0.3);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1001;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
+            color: #d1ecf1; font-size: 11.5px; font-weight: 700; text-align: center;
+            padding: 7px 15px; position: fixed; width: 100%; top: 0; z-index: 1001;
+            display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+            border-bottom: 1px solid rgba(0, 180, 216, 0.25);
         }
+        .top-trust-bar span { display: inline-flex; align-items: center; gap: 6px; }
 
-        .top-trust-bar span {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* --- НАВИГАЦИЯ --- */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 8%;
-            background: rgba(6, 9, 14, 0.95);
-            position: fixed;
-            width: 100%;
-            top: 35px;
-            z-index: 1000;
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(0, 180, 216, 0.18);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 8%; background: rgba(6, 9, 14, 0.95); position: fixed;
+            width: 100%; top: 31px; z-index: 1000; backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 180, 216, 0.15);
         }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 900;
-            letter-spacing: 1.5px;
-            color: #fff;
-        }
-
-        .logo span {
-            color: var(--blue-glow);
-            text-shadow: 0 0 15px rgba(0, 180, 216, 0.8);
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
+        .logo { font-size: 22px; font-weight: 900; letter-spacing: 1.2px; color: #fff; }
+        .logo span { color: var(--blue-glow); text-shadow: 0 0 12px rgba(0, 180, 216, 0.7); }
         .nav-btn {
-            background: var(--cta-gradient);
-            color: #fff;
-            padding: 11px 24px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 800;
-            font-size: 13px;
-            letter-spacing: 0.4px;
-            box-shadow: 0 4px 18px var(--cta-glow);
-            transition: 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: none;
-            cursor: pointer;
+            background: var(--cta-gradient); color: #fff; padding: 9px 20px;
+            text-decoration: none; border-radius: 25px; font-weight: 800; font-size: 12.5px;
+            box-shadow: 0 4px 15px var(--cta-glow); transition: 0.3s;
         }
 
-        .nav-btn:hover {
-            background: var(--cta-gradient-hover);
-            transform: scale(1.05);
-            box-shadow: 0 6px 24px var(--cta-glow-hover);
-        }
-
-        /* --- HERO СЕКЦИЯ --- */
         .hero {
-            min-height: 100vh;
-            padding: 170px 6% 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: radial-gradient(circle at 75% 45%, rgba(0, 180, 216, 0.22), transparent 65%);
-            gap: 20px;
+            min-height: 100vh; padding: 160px 8% 60px; display: flex;
+            align-items: center; justify-content: space-between;
+            background: radial-gradient(circle at 75% 45%, rgba(0, 180, 216, 0.2), transparent 65%); gap: 20px;
         }
-
-        .hero-content {
-            flex: 0.95;
-            max-width: 530px;
-            z-index: 20;
-        }
-
-        .hero-title {
-            font-size: 46px;
-            font-weight: 900;
-            line-height: 1.15;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .hero-title span {
-            color: var(--blue-glow);
-            display: block;
-            text-shadow: 0 0 25px rgba(0, 180, 216, 0.5);
-        }
-
-        .hero-desc {
-            font-size: 16px;
-            color: var(--text-muted);
-            margin-bottom: 25px;
-        }
-
-        .hero-guarantees {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 30px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .hero-guarantees div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .hero-guarantees i {
-            color: var(--accent-green);
-            font-size: 16px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
+        .hero-content { flex: 1; max-width: 530px; }
+        .hero-title { font-size: 44px; font-weight: 900; line-height: 1.15; margin-bottom: 18px; text-transform: uppercase; }
+        .hero-title span { color: var(--blue-glow); display: block; text-shadow: 0 0 20px rgba(0, 180, 216, 0.45); }
+        .hero-desc { font-size: 15.5px; color: var(--text-muted); margin-bottom: 22px; }
+        .hero-guarantees { display: flex; flex-direction: column; gap: 8px; margin-bottom: 25px; font-size: 13.5px; font-weight: 600; }
+        .hero-guarantees div { display: flex; align-items: center; gap: 8px; }
+        .hero-guarantees i { color: var(--accent-green); }
+        .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 
         .btn-primary {
-            background: var(--cta-gradient);
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 6px 25px var(--cta-glow);
-            transition: 0.3s;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 0.6px;
-            touch-action: manipulation;
+            background: var(--cta-gradient); color: #fff; padding: 14px 28px; border: none;
+            cursor: pointer; text-decoration: none; border-radius: 12px; font-weight: 800;
+            display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 5px 20px var(--cta-glow);
+            text-transform: uppercase; font-size: 13.5px; letter-spacing: 0.5px;
         }
-
-        .btn-primary:hover {
-            background: var(--cta-gradient-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 35px var(--cta-glow-hover);
-        }
-
-        @keyframes goldShineSweep {
-            0% { left: -120%; }
-            25% { left: 120%; }
-            100% { left: 120%; }
-        }
-
-        @keyframes goldPulseGlow {
-            0%, 100% { 
-                box-shadow: 0 6px 25px var(--cta-glow); 
-                transform: scale(1);
-            }
-            50% { 
-                box-shadow: 0 10px 38px var(--cta-glow-hover), 0 0 15px rgba(255, 215, 0, 0.5); 
-                transform: scale(1.02);
-            }
-        }
-
-        .btn-marketing {
-            position: relative;
-            overflow: hidden;
-            animation: goldPulseGlow 3s infinite ease-in-out;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 32px !important;
-            text-align: center;
-            gap: 2px !important;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-        }
-
-        .btn-marketing .btn-main-text {
-            font-size: 16px;
-            font-weight: 900;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            letter-spacing: 0.6px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .btn-marketing .btn-sub-text {
-            font-size: 11px;
-            color: #fff3e0;
-            font-weight: 600;
-            text-transform: none;
-            letter-spacing: 0.3px;
-            opacity: 0.95;
-        }
-
-        .btn-marketing::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -120%;
-            width: 60%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), rgba(255, 215, 0, 0.3), transparent);
-            transform: skewX(-25deg);
-            animation: goldShineSweep 4s infinite ease-in-out;
-        }
-
         .btn-phone {
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            border: 2px solid rgba(0, 180, 216, 0.4);
-            padding: 15px 24px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s;
-            font-size: 14px;
+            background: rgba(255, 255, 255, 0.05); color: #fff; border: 1.5px solid rgba(0, 180, 216, 0.35);
+            padding: 14px 22px; text-decoration: none; border-radius: 12px; font-weight: 700;
+            display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px;
         }
 
-        .btn-phone:hover {
-            border-color: var(--blue-glow);
-            color: var(--blue-glow);
-            background: rgba(0, 180, 216, 0.1);
-        }
-
-        /* --- ДЯСНА ЧАСТ: ШИШЕ И ПЛАВАЩИ БУТОНИ --- */
-        .showcase-container {
-            flex: 1.3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        @keyframes floatEffect {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-16px); }
-        }
-
-        .bottle-wrapper {
-            position: relative;
-            display: inline-block;
-            animation: floatEffect 5s ease-in-out infinite;
-            z-index: 10;
-        }
-
-        .bottle-img {
-            max-height: 800px;
-            width: auto;
-            display: block;
-            filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.95)) 
-                    drop-shadow(0 0 35px rgba(0, 180, 216, 0.6)) 
-                    drop-shadow(0 0 70px rgba(0, 180, 216, 0.25));
-            transition: 0.4s ease;
-        }
-
+        .showcase-container { flex: 1.2; display: flex; align-items: center; justify-content: center; position: relative; }
+        .bottle-wrapper { position: relative; display: inline-block; animation: floatEffect 5s ease-in-out infinite; }
+        @keyframes floatEffect { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        .bottle-img { max-height: 520px; width: auto; display: block; filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 25px rgba(0, 180, 216, 0.5)); }
         .bottle-badge {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(12, 18, 29, 0.95);
-            border: 1px solid var(--blue-glow);
-            padding: 8px 24px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 800;
-            color: #fff;
-            white-space: nowrap;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.8);
-            z-index: 15;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
+            background: rgba(12, 18, 29, 0.95); border: 1px solid var(--blue-glow);
+            padding: 6px 18px; border-radius: 20px; font-size: 12px; font-weight: 800;
+            color: #fff; white-space: nowrap; box-shadow: 0 8px 16px rgba(0,0,0,0.8);
         }
-
         .feature-bubble {
-            position: absolute;
-            z-index: 20;
-            background: rgba(12, 18, 29, 0.93);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 180, 216, 0.4);
-            padding: 12px 18px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: #fff;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            width: 220px;
+            position: absolute; background: rgba(12, 18, 29, 0.92); backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 180, 216, 0.35); padding: 10px 14px; border-radius: 12px;
+            display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); width: 195px;
         }
+        .feature-bubble i { font-size: 19px; color: var(--blue-glow); }
+        .bubble-text strong { display: block; font-size: 12px; font-weight: 700; }
+        .bubble-text span { font-size: 10px; color: var(--text-muted); }
+        .bubble-1 { top: 60px; right: 90%; }
+        .bubble-2 { top: 130px; left: 90%; }
+        .bubble-3 { bottom: 180px; right: 90%; }
+        .bubble-4 { bottom: 90px; left: 90%; }
 
-        .feature-bubble i {
-            font-size: 22px;
-            color: var(--blue-glow);
-        }
-
-        .bubble-text strong {
-            display: block;
-            font-size: 13px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .bubble-text span {
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .feature-bubble:hover {
-            transform: scale(1.1);
-            border-color: var(--blue-glow);
-            background: rgba(17, 26, 43, 0.98);
-            box-shadow: 0 0 25px rgba(0, 180, 216, 0.8);
-        }
-
-        .bubble-1 { top: 100px; right: 88%; }
-        .bubble-2 { top: 170px; left: 88%; }
-        .bubble-3 { bottom: 240px; right: 88%; }
-        .bubble-4 { bottom: 120px; left: 88%; }
-
-        /* --- СТЪЛБОВЕ НА ДОВЕРИЕТО --- */
         .trust-strip {
-            padding: 40px 8%;
-            background: #090f19;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            padding: 35px 8%; background: #090f19; border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;
         }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
+        .trust-item { display: flex; align-items: center; gap: 12px; }
         .trust-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            background: rgba(0, 180, 216, 0.1);
-            border: 1px solid rgba(0, 180, 216, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            color: var(--blue-glow);
-            flex-shrink: 0;
+            width: 44px; height: 44px; border-radius: 10px; background: rgba(0, 180, 216, 0.1);
+            border: 1px solid rgba(0, 180, 216, 0.3); display: flex; align-items: center;
+            justify-content: center; font-size: 19px; color: var(--blue-glow); flex-shrink: 0;
         }
+        .trust-item h4 { font-size: 13.5px; font-weight: 800; }
+        .trust-item p { font-size: 11.5px; color: var(--text-muted); }
 
-        .trust-item h4 {
-            font-size: 14px;
-            font-weight: 800;
-        }
-
-        .trust-item p {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        /* --- ПОДРОБНИ КАРТИ СЪС СВОЙСТВАТА --- */
-        .detailed-features {
-            padding: 90px 8%;
-            background: #080c14;
-        }
-
+        .detailed-features { padding: 75px 8%; background: #080c14; }
         .detail-card {
-            scroll-margin-top: 130px;
-            background: var(--bg-card);
-            border: 1px solid rgba(0, 180, 216, 0.2);
-            border-radius: 18px;
-            padding: 35px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            transition: 0.4s;
+            background: var(--bg-card); border: 1px solid rgba(0, 180, 216, 0.2); border-radius: 16px;
+            padding: 28px; margin-bottom: 22px; display: flex; align-items: center; gap: 25px;
         }
-
-        .detail-card:hover {
-            border-color: var(--blue-glow);
-            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.2);
-            transform: translateX(6px);
-        }
-
         .detail-icon-wrap {
-            width: 80px;
-            height: 80px;
-            background: rgba(0, 180, 216, 0.1);
-            border: 2px solid var(--blue-glow);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: var(--blue-glow);
-            flex-shrink: 0;
+            width: 65px; height: 65px; background: rgba(0, 180, 216, 0.1); border: 2px solid var(--blue-glow);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px;
+            color: var(--blue-glow); flex-shrink: 0;
         }
+        .detail-info h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .detail-info h3 span { color: var(--blue-glow); }
+        .detail-info p { font-size: 14px; color: var(--text-muted); }
 
-        .detail-info h3 {
-            font-size: 22px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        .detail-info h3 span {
-            color: var(--blue-glow);
-        }
-
-        .detail-info p {
-            font-size: 15px;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* --- СЕКЦИЯ: ИЗГОДНА ОФЕРТА --- */
-        .offer-section {
-            padding: 90px 8%;
-            background: radial-gradient(circle at center, rgba(0, 180, 216, 0.12), transparent 70%);
-            text-align: center;
-            scroll-margin-top: 90px;
-        }
-
-        .offer-cards-wrap {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
+        .offer-section { padding: 75px 8%; text-align: center; background: radial-gradient(circle at center, rgba(0, 180, 216, 0.1), transparent 70%); }
+        .offer-cards-wrap { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 35px; }
         .offer-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 35px 25px;
-            width: 100%;
-            max-width: 340px;
-            position: relative;
-            text-align: left;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px;
+            padding: 30px 22px; width: 100%; max-width: 320px; position: relative; text-align: left;
+            display: flex; flex-direction: column; justify-content: space-between;
         }
-
-        .offer-card.featured {
-            border: 2px solid #ff8c00;
-            box-shadow: 0 0 35px rgba(255, 140, 0, 0.25);
-            transform: scale(1.04);
-        }
-
+        .offer-card.featured { border: 2px solid #ff8c00; box-shadow: 0 0 30px rgba(255, 140, 0, 0.22); }
         .popular-badge {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--cta-gradient);
-            color: #fff;
-            padding: 5px 18px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(255, 120, 0, 0.4);
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: var(--cta-gradient); color: #fff; padding: 4px 14px; border-radius: 20px;
+            font-size: 10.5px; font-weight: 900; letter-spacing: 0.8px; text-transform: uppercase;
         }
+        .offer-price { display: flex; align-items: baseline; gap: 10px; margin: 14px 0; }
+        .current-price { font-size: 32px; font-weight: 900; color: #ff9d24; }
+        .old-price { font-size: 15px; color: var(--text-muted); text-decoration: line-through; }
+        .offer-features { list-style: none; margin-bottom: 22px; font-size: 12.5px; }
+        .offer-features li { padding: 6px 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .offer-features li i { color: var(--accent-green); }
 
-        .offer-card h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .offer-price {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            margin: 18px 0;
-        }
-
-        .current-price {
-            font-size: 34px;
-            font-weight: 900;
-            color: #ff9d24;
-        }
-
-        .old-price {
-            font-size: 16px;
-            color: var(--text-muted);
-            text-decoration: line-through;
-        }
-
-        .offer-features {
-            list-style: none;
-            margin-bottom: 25px;
-            font-size: 13px;
-        }
-
-        .offer-features li {
-            padding: 8px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .offer-features li i {
-            color: var(--accent-green);
-        }
-
-        /* --- ЦЕНТЪР ЗА ДИРЕКТНА ЗАЯВКА --- */
-        .order-hub-section {
-            padding: 90px 8%;
-            background: linear-gradient(180deg, #090e18 0%, #06090e 100%);
-            border-top: 1px solid rgba(0, 180, 216, 0.2);
-            border-bottom: 1px solid rgba(0, 180, 216, 0.2);
-            text-align: center;
-            scroll-margin-top: 90px;
-        }
-
+        .order-hub-section { padding: 75px 8%; text-align: center; background: #080c14; border-top: 1px solid rgba(0, 180, 216, 0.15); }
         .order-hub-box {
-            max-width: 820px;
-            margin: 35px auto 0;
-            background: var(--bg-card);
-            border: 2px solid #ff8c00;
-            border-radius: 24px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 140, 0, 0.15);
-            text-align: center;
+            max-width: 780px; margin: 30px auto 0; background: var(--bg-card); border: 2px solid #ff8c00;
+            border-radius: 20px; padding: 32px 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.7);
         }
-
         .selected-package-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 140, 0, 0.12);
-            border: 1px solid #ff8c00;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-weight: 800;
-            color: #ff9d24;
-            font-size: 14px;
-            margin-bottom: 24px;
+            display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 140, 0, 0.12);
+            border: 1px solid #ff8c00; padding: 6px 16px; border-radius: 25px; font-weight: 800;
+            color: #ff9d24; font-size: 13px; margin-bottom: 20px;
         }
-
-        .channel-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 18px;
-            margin: 30px 0;
-            text-align: left;
-        }
-
+        .channel-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 25px 0; text-align: left; }
         .channel-card {
-            background: #121a29;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 22px 20px;
-            text-decoration: none;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
+            background: #121a29; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px;
+            padding: 18px 16px; text-decoration: none; color: #fff; display: flex; flex-direction: column;
+            justify-content: space-between; transition: 0.25s; cursor: pointer;
         }
-
-        .channel-card:hover {
-            transform: translateY(-5px);
-            border-color: #ff8c00;
-            box-shadow: 0 10px 25px rgba(255, 140, 0, 0.25);
-            background: #172236;
-        }
-
-        .channel-icon-wrap {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 14px;
-        }
-
+        .channel-card:hover { border-color: #ff8c00; transform: translateY(-3px); }
+        .channel-icon-wrap { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 19px; margin-bottom: 10px; }
         .channel-phone .channel-icon-wrap { background: rgba(37, 211, 102, 0.15); color: #25d366; }
         .channel-insta .channel-icon-wrap { background: rgba(225, 48, 108, 0.15); color: #e1306c; }
         .channel-email .channel-icon-wrap { background: rgba(0, 180, 216, 0.15); color: var(--blue-glow); }
         .channel-fb .channel-icon-wrap { background: rgba(24, 119, 242, 0.15); color: #3b82f6; }
-
-        .channel-card h4 {
-            font-size: 16px;
-            font-weight: 800;
-            margin-bottom: 4px;
-        }
-
-        .channel-card p {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        .channel-action-badge {
-            font-size: 13px;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #ff9d24;
-        }
-
-        .copy-template-container {
-            background: #090e18;
-            border: 1px dashed rgba(255, 255, 255, 0.15);
-            border-radius: 14px;
-            padding: 20px;
-            margin-top: 25px;
-            text-align: left;
-        }
-
-        .copy-template-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .copy-template-header span {
-            font-size: 13px;
-            font-weight: 700;
-            color: #cbd5e1;
-        }
-
-        .btn-copy-template {
-            background: #1e293b;
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 12px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: 0.2s;
-        }
-
-        .btn-copy-template:hover {
-            background: #ff8c00;
-            border-color: #ff8c00;
-        }
-
-        .template-text-display {
-            background: #05070c;
-            border-radius: 8px;
-            padding: 12px 15px;
-            font-family: monospace;
-            font-size: 12px;
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-
-        /* --- КЛИЕНТСКИ ОТЗИВИ С ВИДЕА --- */
-        .reviews-section {
-            padding: 90px 8%;
-            background: #090e17;
-            text-align: center;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .review-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            padding: 25px;
-            text-align: left;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .review-stars {
-            color: var(--gold);
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-
-        .review-text {
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .review-video-wrap {
-            margin: 15px 0;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 180, 216, 0.3);
-            background: #000;
-        }
-
-        .review-video-wrap video {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .reviewer-avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: rgba(0, 180, 216, 0.2);
-            border: 1px solid var(--blue-glow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            color: #fff;
-        }
-
-        .reviewer-name {
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .reviewer-car {
-            font-size: 12px;
-            color: var(--blue-glow);
-        }
-
-        /* --- ФОРМА ЗА ОТЗИВИ --- */
-        .add-review-box {
-            max-width: 650px;
-            margin: 50px auto 0;
-            background: var(--bg-card);
-            border: 1px solid rgba(0, 180, 216, 0.3);
-            border-radius: 18px;
-            padding: 35px 30px;
-            text-align: center;
-        }
-
-        .star-rating-select {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            font-size: 26px;
-            color: var(--text-muted);
-            margin: 15px 0 20px;
-            cursor: pointer;
-        }
-
-        .star-rating-select i:hover,
-        .star-rating-select i.active {
-            color: var(--gold);
-        }
-
-        .review-form-input {
-            width: 100%;
-            background: #070a0f;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 12px 15px;
-            border-radius: 8px;
-            color: #fff;
-            font-size: 14px;
-            margin-bottom: 12px;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        .review-form-input:focus {
-            border-color: var(--blue-glow);
-        }
-
-        textarea.review-form-input {
-            resize: vertical;
-            min-height: 90px;
-        }
-
-        /* --- FAQ: ЧЕСТО ЗАДАВАНИ ВЪПРОСИ (100% ЗАПАЗЕНА) --- */
-        .faq-section {
-            padding: 90px 8%;
-            background: #080c14;
-            text-align: center;
-        }
-
-        .faq-wrap {
-            max-width: 750px;
-            margin: 40px auto 0;
-            text-align: left;
-        }
-
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 20px;
-            font-weight: 700;
-            font-size: 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-        }
-
-        .faq-question i {
-            color: var(--blue-glow);
-        }
-
-        .faq-answer {
-            padding: 0 20px 20px;
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* --- ПРЕДПОСЛЕДНА СЕКЦИЯ: ИМАТЕ ВЪПРОСИ? --- */
-        .help-support-section {
-            padding: 90px 8%;
-            background: linear-gradient(180deg, #080c14 0%, #0c1422 100%);
-            border-top: 1px solid rgba(0, 180, 216, 0.2);
-            text-align: center;
-        }
-
-        .help-container {
-            max-width: 820px;
-            margin: 0 auto;
-        }
-
-        .help-title {
-            font-size: 34px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            line-height: 1.25;
-        }
-
-        .help-title span {
-            color: var(--blue-glow);
-        }
-
-        .help-desc {
-            font-size: 15px;
-            color: var(--text-muted);
-            max-width: 680px;
-            margin: 0 auto 35px;
-            line-height: 1.7;
-        }
-
-        .help-subtitle {
-            font-size: 20px;
-            font-weight: 800;
-            color: #ff9d24;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .help-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 18px;
-            text-align: left;
-        }
-
-        .help-card {
-            background: #111a2b;
-            border: 1px solid rgba(0, 180, 216, 0.25);
-            border-radius: 16px;
-            padding: 22px 20px;
-            text-decoration: none;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-        }
-
-        .help-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--blue-glow);
-            box-shadow: 0 10px 25px rgba(0, 180, 216, 0.25);
-            background: #16233a;
-        }
-
-        .help-icon-wrap {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 14px;
-        }
-
-        .help-card h4 {
-            font-size: 16px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-
-        .help-card p {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        .help-action-badge {
-            font-size: 13px;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--blue-glow);
-        }
-
-        .help-card-disabled {
-            opacity: 0.65;
-            cursor: default;
-        }
-
-        .help-card-disabled:hover {
-            transform: none;
-            border-color: rgba(0, 180, 216, 0.25);
-            box-shadow: none;
-            background: #111a2b;
-        }
-
-        /* --- КАРЕТО ЗА ДИРЕКТЕН КОНТАКТ --- */
-        .cta-banner {
-            margin: 40px 8% 60px;
-            background: linear-gradient(135deg, #0e1e38, #0a111e);
-            border: 1px solid var(--blue-glow);
-            border-radius: 20px;
-            padding: 50px 30px;
-            text-align: center;
-            box-shadow: 0 0 50px rgba(0, 180, 216, 0.25);
-        }
-
-        .social-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .soc-btn {
-            padding: 15px 30px;
-            border-radius: 12px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 15px;
-            transition: 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-
-        .soc-cta-gold {
-            background: var(--cta-gradient);
-            box-shadow: 0 4px 20px var(--cta-glow);
-        }
-
-        .soc-call {
-            background: #25d366;
-        }
-
-        /* --- FOOTER & ПРАВНА СЕКЦИЯ --- */
-        footer {
-            background: #030508;
-            padding: 40px 8% 30px;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
-        .legal-footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin: 18px 0;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .legal-link-btn {
-            background: transparent;
-            border: none;
-            color: var(--blue-glow);
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: underline;
-            transition: 0.2s;
-            padding: 4px 8px;
-        }
-
-        .legal-link-btn:hover {
-            color: #fff;
-        }
-
-        /* --- МОДАЛЕН ЮРИДИЧЕСКИ ПРОЗОРЕЦ --- */
-        .legal-modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            z-index: 100000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .legal-modal-box {
-            background: #0c121d;
-            border: 2px solid var(--blue-glow);
-            border-radius: 18px;
-            width: 100%;
-            max-width: 880px;
-            max-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 180, 216, 0.35);
-            animation: modalFadeIn 0.3s ease;
-        }
-
-        @keyframes modalFadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .legal-modal-header {
-            padding: 20px 25px;
-            background: #111a2b;
-            border-bottom: 1px solid rgba(0, 180, 216, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .legal-modal-header h3 {
-            font-size: 18px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-close-modal {
-            background: transparent;
-            border: none;
-            color: #94a3b8;
-            font-size: 24px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .btn-close-modal:hover {
-            color: #ff5400;
-        }
-
-        .legal-modal-tabs {
-            display: flex;
-            background: #090e18;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            overflow-x: auto;
-        }
-
-        .modal-tab-btn {
-            padding: 12px 16px;
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            font-size: 12.5px;
-            font-weight: 700;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: 0.2s;
-            border-bottom: 2px solid transparent;
-        }
-
-        .modal-tab-btn.active {
-            color: var(--blue-glow);
-            border-bottom: 2px solid var(--blue-glow);
-            background: rgba(0, 180, 216, 0.08);
-        }
-
-        .legal-modal-content {
-            padding: 25px;
-            overflow-y: auto;
-            color: #cbd5e1;
-            font-size: 13.5px;
-            line-height: 1.7;
-        }
-
-        .legal-modal-content h4 {
-            color: #fff;
-            font-size: 16px;
-            margin: 15px 0 8px;
-        }
-
-        .legal-modal-content p, .legal-modal-content ul {
-            margin-bottom: 12px;
-        }
-
-        .legal-modal-content ul {
-            padding-left: 20px;
-        }
-
-        .legal-highlight-box {
-            background: #142033;
-            border-left: 4px solid var(--blue-glow);
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            font-size: 13px;
-        }
-
-        .form-copy-box {
-            background: #05080e;
-            border: 1px dashed rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 8px;
-            font-family: monospace;
-            font-size: 12px;
-            color: #94a3b8;
-            margin: 12px 0;
-        }
-
-        /* ==========================================================================
-           НЕУТРАЛНИ КЛАСОВЕ ЗА БИСКВИТКИ (НЕ СЕ БЛОКИРАТ ОТ ADBLOCK / BRAVE)
-           ========================================================================== */
+        .channel-card h4 { font-size: 15px; font-weight: 800; margin-bottom: 3px; }
+        .channel-card p { font-size: 11.5px; color: var(--text-muted); margin-bottom: 10px; }
+        .channel-action-badge { font-size: 12px; font-weight: 800; color: #ff9d24; display: flex; align-items: center; gap: 4px; }
+
+        .copy-template-container { background: #090e18; border: 1px dashed rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 16px; margin-top: 20px; text-align: left; }
+        .copy-template-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
+        .copy-template-header span { font-size: 12px; font-weight: 700; color: #cbd5e1; }
+        .btn-copy-template { background: #1e293b; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); padding: 6px 12px; border-radius: 6px; font-weight: 700; font-size: 11px; cursor: pointer; }
+        .template-text-display { background: #05070c; border-radius: 6px; padding: 10px 12px; font-family: monospace; font-size: 11.5px; color: #94a3b8; }
+
+        .reviews-section { padding: 75px 8%; background: #090e17; text-align: center; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        .review-card { background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 14px; padding: 20px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
+        .review-stars { color: var(--gold); margin-bottom: 10px; font-size: 13px; }
+        .review-text { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; font-style: italic; }
+        .review-video-wrap { margin: 10px 0; border-radius: 10px; overflow: hidden; background: #000; border: 1px solid rgba(0, 180, 216, 0.25); }
+        .review-video-wrap video { width: 100%; height: auto; max-height: 280px; object-fit: contain; display: block; }
+        .reviewer-info { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+        .reviewer-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(0, 180, 216, 0.15); border: 1px solid var(--blue-glow); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
+        .reviewer-name { font-size: 13px; font-weight: 700; }
+        .reviewer-car { font-size: 11.5px; color: var(--blue-glow); }
+
+        .add-review-box { max-width: 600px; margin: 40px auto 0; background: var(--bg-card); border: 1px solid rgba(0, 180, 216, 0.25); border-radius: 16px; padding: 25px 20px; text-align: center; }
+        .star-rating-select { display: flex; justify-content: center; gap: 6px; font-size: 22px; color: var(--text-muted); margin: 10px 0 15px; cursor: pointer; }
+        .star-rating-select i.active { color: var(--gold); }
+        .review-form-input { width: 100%; background: #070a0f; border: 1px solid rgba(255, 255, 255, 0.15); padding: 10px 12px; border-radius: 6px; color: #fff; font-size: 13px; margin-bottom: 10px; outline: none; }
+        textarea.review-form-input { resize: vertical; min-height: 80px; }
+
+        .faq-section { padding: 75px 8%; background: #080c14; text-align: center; }
+        .faq-wrap { max-width: 720px; margin: 30px auto 0; text-align: left; }
+        .faq-item { background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; margin-bottom: 12px; }
+        .faq-question { padding: 16px 18px; font-weight: 700; font-size: 14.5px; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question i { color: var(--blue-glow); }
+        .faq-answer { padding: 0 18px 16px; font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+        .help-support-section { padding: 75px 8%; background: #090e17; border-top: 1px solid rgba(0, 180, 216, 0.15); text-align: center; }
+        .help-container { max-width: 780px; margin: 0 auto; }
+        .help-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; text-align: left; margin-top: 20px; }
+        .help-card { background: #111a2b; border: 1px solid rgba(0, 180, 216, 0.2); border-radius: 14px; padding: 18px 16px; text-decoration: none; color: #fff; cursor: pointer; }
+        .help-icon-wrap { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 19px; margin-bottom: 10px; }
+        .help-card h4 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+        .help-card p { font-size: 11.5px; color: var(--text-muted); margin-bottom: 8px; }
+        .help-action-badge { font-size: 12px; font-weight: 800; color: var(--blue-glow); }
+
+        .cta-banner { margin: 30px 8% 50px; background: linear-gradient(135deg, #0e1e38, #0a111e); border: 1px solid var(--blue-glow); border-radius: 16px; padding: 40px 20px; text-align: center; }
+        .social-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+
+        footer { background: #030508; padding: 30px 8%; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-muted); font-size: 12px; }
+        .legal-footer-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 15px 0 10px; }
+        .legal-link-btn { background: transparent; border: none; color: var(--blue-glow); font-size: 12px; font-weight: 600; cursor: pointer; text-decoration: underline; }
+
+        .legal-modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(6px); z-index: 100000; display: none; justify-content: center; align-items: center; padding: 15px; }
+        .legal-modal-box { background: #0c121d; border: 1.5px solid var(--blue-glow); border-radius: 14px; width: 100%; max-width: 820px; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden; }
+        .legal-modal-header { padding: 16px 20px; background: #111a2b; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0, 180, 216, 0.2); }
+        .legal-modal-header h3 { font-size: 16px; color: #fff; }
+        .btn-close-modal { background: transparent; border: none; color: #94a3b8; font-size: 22px; cursor: pointer; }
+        .legal-modal-tabs { display: flex; background: #090e18; border-bottom: 1px solid rgba(255, 255, 255, 0.08); overflow-x: auto; }
+        .modal-tab-btn { padding: 10px 14px; background: transparent; border: none; color: var(--text-muted); font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+        .modal-tab-btn.active { color: var(--blue-glow); border-bottom: 2px solid var(--blue-glow); background: rgba(0, 180, 216, 0.08); }
+        .legal-modal-content { padding: 20px; overflow-y: auto; color: #cbd5e1; font-size: 12.5px; line-height: 1.6; }
+        .legal-highlight-box { background: #142033; border-left: 3px solid var(--blue-glow); padding: 12px; border-radius: 6px; margin: 10px 0; }
+        .form-copy-box { background: #05080e; border: 1px dashed rgba(255, 255, 255, 0.2); padding: 10px; border-radius: 6px; font-family: monospace; font-size: 11px; margin: 10px 0; }
+
+        /* БАНЕР БИСКВИТКИ */
         .sv-notice-panel {
-            position: fixed;
-            bottom: 25px;
-            left: 25px;
-            max-width: 440px;
-            background: rgba(12, 18, 29, 0.98);
-            border: 1.5px solid var(--blue-glow);
-            border-radius: 16px;
-            padding: 18px 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.95), 0 0 25px rgba(0, 180, 216, 0.35);
-            z-index: 9999999 !important; /* Най-висок абсолютен слой */
-            display: none;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            animation: modalFadeIn 0.3s ease;
+            position: fixed; bottom: 25px; left: 25px; max-width: 400px;
+            background: rgba(12, 18, 29, 0.98); border: 1.5px solid var(--blue-glow);
+            border-radius: 14px; padding: 16px; box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 180, 216, 0.35);
+            z-index: 9999999 !important; display: block; backdrop-filter: blur(10px);
+            pointer-events: auto !important;
         }
-
-        .sv-notice-title {
-            font-size: 15px;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .sv-notice-text {
-            font-size: 12px;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .sv-notice-actions {
-            display: flex;
-            gap: 10px;
-        }
-
+        .sv-notice-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+        .sv-notice-text { font-size: 11.5px; color: var(--text-muted); line-height: 1.45; margin-bottom: 12px; }
+        .sv-notice-actions { display: flex; gap: 8px; position: relative; z-index: 100; }
         .btn-sv-accept {
-            flex: 1;
-            background: var(--cta-gradient);
-            color: #fff;
-            border: none;
-            padding: 11px;
-            border-radius: 8px;
-            font-size: 12.5px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: 0.2s;
-            text-align: center;
+            flex: 1; background: var(--cta-gradient); color: #fff; border: none; padding: 10px;
+            border-radius: 6px; font-size: 11.5px; font-weight: 800; cursor: pointer;
+            pointer-events: auto !important; touch-action: manipulation;
         }
-
         .btn-sv-reject {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            padding: 11px;
-            border-radius: 8px;
-            font-size: 12.5px;
-            font-weight: 800;
-            cursor: pointer;
-            transition: 0.2s;
-            text-align: center;
+            flex: 1; background: rgba(255, 255, 255, 0.08); color: #fff; border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px;
+            border-radius: 6px; font-size: 11.5px; font-weight: 800; cursor: pointer;
+            pointer-events: auto !important; touch-action: manipulation;
         }
 
-        .btn-sv-accept:hover {
-            background: var(--cta-gradient-hover);
-        }
-
-        .btn-sv-reject:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        /* --- МОБИЛЕН СТИКИ БАР --- */
         .mobile-sticky-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(6, 9, 14, 0.98);
-            border-top: 1px solid rgba(255, 140, 0, 0.4);
-            padding: 12px 20px;
-            padding-bottom: max(12px, env(safe-area-inset-bottom));
-            display: none;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 9999;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(6, 9, 14, 0.98);
+            border-top: 1px solid rgba(255, 140, 0, 0.4); padding: 10px 16px;
+            padding-bottom: max(10px, env(safe-area-inset-bottom)); display: none;
+            justify-content: space-between; align-items: center; z-index: 9999;
         }
-
         .mobile-btn-order {
-            flex: 1;
-            text-align: center;
-            padding: 13px 15px;
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
-            font-weight: 900;
-            font-size: 13px;
-            background: var(--cta-gradient);
-            color: #fff;
-            text-decoration: none;
-            margin-right: 10px;
-            box-shadow: 0 0 18px var(--cta-glow);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            flex: 1; text-align: center; padding: 12px; border-radius: 8px;
+            font-weight: 900; font-size: 12.5px; background: var(--cta-gradient);
+            color: #fff; text-decoration: none; margin-right: 8px; box-shadow: 0 0 15px var(--cta-glow);
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px;
         }
-
         .mobile-btn-call {
-            background: rgba(255,255,255,0.1);
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.2) !important;
-            flex: 0.4 !important;
-            text-align: center;
-            padding: 12px 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
+            background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.2);
+            flex: 0.35; text-align: center; padding: 11px; border-radius: 8px; text-decoration: none;
+            display: inline-flex; align-items: center; justify-content: center; font-size: 15px;
         }
 
-        /* ==========================================================================
-           ПЪЛЕН МОБИЛЕН РЕДИЗАЙН (САМО ЗА ТЕЛЕФОНИ И ТАБЛЕТИ)
-           ========================================================================== */
+        /* МОБИЛЕН РЕДИЗАЙН */
         @media (max-width: 1024px) {
-            body {
-                padding-bottom: 95px;
-            }
+            body { padding-bottom: 85px; }
+            .hero-title { font-size: 26px !important; line-height: 1.2 !important; margin-bottom: 8px !important; }
+            h2 { font-size: 22px !important; }
+            .detailed-features, .offer-section, .order-hub-section, .reviews-section, .faq-section, .help-support-section { padding: 40px 5% !important; }
+            .top-trust-bar { position: relative; top: auto; font-size: 10.5px; padding: 6px 8px; gap: 10px; justify-content: center; }
+            .top-trust-bar span:nth-child(3) { display: none; }
+            nav { position: sticky; top: 0; padding: 10px 5%; }
+            .logo { font-size: 18px; }
+            .nav-btn { padding: 7px 14px; font-size: 11px; }
 
-            h1.hero-title {
-                font-size: clamp(24px, 6.5vw, 32px) !important;
-                line-height: 1.25 !important;
-                margin-bottom: 15px !important;
-            }
+            .hero { flex-direction: column !important; text-align: center !important; padding: 15px 5% 25px !important; min-height: auto !important; gap: 15px !important; }
+            .hero-content { order: 1; max-width: 100%; }
+            .hero-desc { display: none; }
+            .hero-guarantees { font-size: 12px !important; gap: 6px !important; max-width: 320px !important; margin: 15px auto 0 !important; }
 
-            h2 {
-                font-size: clamp(22px, 5.5vw, 26px) !important;
-                line-height: 1.3 !important;
-            }
+            .showcase-container { order: 2; width: 100%; margin: 5px 0 10px; }
+            .bottle-wrapper { display: flex !important; flex-wrap: wrap !important; justify-content: space-between !important; animation: none !important; max-width: 330px !important; margin: 0 auto; }
+            .bottle-img { order: 1 !important; max-height: 250px !important; width: auto !important; margin: 0 auto !important; }
+            .bottle-badge { order: 2 !important; position: static !important; transform: none !important; width: 100% !important; margin: 4px 0 12px !important; font-size: 11px !important; padding: 4px 12px !important; }
+            .feature-bubble { order: 3 !important; position: static !important; width: 48% !important; margin-bottom: 6px !important; padding: 8px !important; border-radius: 10px !important; }
+            .feature-bubble i { font-size: 15px !important; }
+            .bubble-text strong { font-size: 11px !important; }
+            .bubble-text span { font-size: 9px !important; }
 
-            .detailed-features,
-            .offer-section,
-            .order-hub-section,
-            .reviews-section,
-            .faq-section,
-            .help-support-section {
-                padding: 45px 5% !important;
-            }
+            .hero-buttons { order: 3; flex-direction: column; width: 100%; gap: 8px; }
+            .hero-buttons .btn-primary { width: 100%; max-width: 330px; margin: 0 auto; padding: 13px 20px; font-size: 13px; }
+            .hero-buttons .btn-phone { display: none; }
 
-            .top-trust-bar {
-                position: relative;
-                top: auto;
-                font-size: 11px;
-                padding: 8px 12px;
-                gap: 8px;
-            }
+            .trust-strip { grid-template-columns: 1fr 1fr !important; gap: 10px !important; padding: 20px 5% !important; }
+            .trust-icon { width: 36px !important; height: 36px !important; font-size: 16px !important; }
+            .trust-item h4 { font-size: 12px !important; }
+            .trust-item p { font-size: 10.5px !important; }
 
-            nav {
-                position: sticky;
-                top: 0;
-                padding: 12px 5%;
-            }
+            .detail-card { flex-direction: column !important; text-align: center !important; padding: 18px !important; }
+            .detail-icon-wrap { width: 52px !important; height: 52px !important; font-size: 22px !important; margin: 0 auto !important; }
 
-            .logo {
-                font-size: 20px;
-            }
+            .offer-card { max-width: 100% !important; padding: 22px 18px !important; }
+            .offer-card.featured { transform: none !important; }
 
-            .nav-btn {
-                padding: 8px 16px;
-                font-size: 12px;
-            }
+            .order-hub-box { padding: 20px 14px !important; }
+            .channel-cards-grid, .help-cards-grid { grid-template-columns: 1fr !important; }
 
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 5% 40px;
-                min-height: auto;
-                gap: 30px;
-            }
+            .mobile-sticky-bar { display: flex !important; }
 
-            .hero-content {
-                max-width: 100%;
-                flex: 1;
-            }
-
-            .hero-desc {
-                font-size: 14.5px;
-                margin-bottom: 20px;
-            }
-
-            .hero-guarantees {
-                text-align: left;
-                max-width: 440px;
-                margin: 0 auto 25px;
-                font-size: 13px;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-                flex-direction: column;
-                width: 100%;
-                gap: 12px;
-            }
-
-            .hero-buttons .btn-primary,
-            .hero-buttons .btn-phone {
-                width: 100%;
-                max-width: 360px;
-                justify-content: center;
-            }
-
-            .showcase-container {
-                width: 100%;
-                margin: 0;
-            }
-
-            .bottle-wrapper {
-                display: flex !important;
-                flex-wrap: wrap !important;
-                justify-content: space-between !important;
-                align-items: center;
-                animation: none !important;
-                width: 100%;
-                max-width: 380px;
-                margin: 0 auto;
-                gap: 8px;
-            }
-
-            .bottle-img {
-                order: 1 !important;
-                max-height: 290px !important;
-                width: auto !important;
-                margin: 0 auto !important;
-                display: block;
-            }
-
-            .bottle-badge {
-                order: 2 !important;
-                position: static !important;
-                transform: none !important;
-                width: 100% !important;
-                justify-content: center;
-                margin: 5px 0 16px !important;
-                font-size: 11.5px !important;
-                padding: 6px 16px !important;
-            }
-
-            .feature-bubble {
-                order: 3 !important;
-                position: static !important;
-                width: calc(50% - 5px) !important;
-                max-width: none !important;
-                margin: 0 !important;
-                padding: 10px 10px !important;
-                border-radius: 12px !important;
-                gap: 8px !important;
-                background: rgba(17, 26, 43, 0.95) !important;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
-            }
-
-            .feature-bubble i {
-                font-size: 18px !important;
-            }
-
-            .bubble-text strong {
-                font-size: 11.5px !important;
-                line-height: 1.2 !important;
-            }
-
-            .bubble-text span {
-                font-size: 10px !important;
-            }
-
-            .trust-strip {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 14px !important;
-                padding: 25px 5% !important;
-            }
-
-            .trust-item {
-                gap: 10px;
-            }
-
-            .trust-icon {
-                width: 40px !important;
-                height: 40px !important;
-                font-size: 17px !important;
-                border-radius: 10px !important;
-            }
-
-            .trust-item h4 {
-                font-size: 12.5px !important;
-            }
-
-            .trust-item p {
-                font-size: 11px !important;
-                line-height: 1.3 !important;
-            }
-
-            .detail-card {
-                flex-direction: column !important;
-                text-align: center !important;
-                padding: 22px 16px !important;
-                gap: 15px !important;
-                margin-bottom: 18px !important;
-            }
-
-            .detail-icon-wrap {
-                width: 60px !important;
-                height: 60px !important;
-                font-size: 24px !important;
-                margin: 0 auto !important;
-            }
-
-            .detail-info h3 {
-                font-size: 18px !important;
-            }
-
-            .detail-info p {
-                font-size: 13.5px !important;
-            }
-
-            .offer-card {
-                max-width: 100% !important;
-                padding: 26px 20px !important;
-            }
-
-            .offer-card.featured {
-                transform: none !important;
-            }
-
-            .order-hub-box {
-                padding: 25px 15px !important;
-                border-radius: 18px !important;
-            }
-
-            .channel-cards-grid,
-            .help-cards-grid {
-                grid-template-columns: 1fr !important;
-                gap: 12px !important;
-            }
-
-            .channel-card,
-            .help-card {
-                padding: 16px !important;
-            }
-
-            .reviews-grid {
-                grid-template-columns: 1fr !important;
-                gap: 18px !important;
-            }
-
-            .review-card {
-                padding: 18px !important;
-            }
-
-            .review-video-wrap {
-                margin: 12px 0 !important;
-                background: #000 !important;
-            }
-
-            .review-video-wrap video {
-                width: 100% !important;
-                height: auto !important;
-                max-height: 380px !important;
-                object-fit: contain !important;
-            }
-
-            .add-review-box {
-                padding: 24px 16px !important;
-            }
-
-            .mobile-sticky-bar {
-                display: flex !important;
-            }
-
-            /* БИСКВИТКИ НА МОБИЛЕН (ТОЧНО НАД СТИКИ БАРА) */
             .sv-notice-panel {
-                left: 12px !important;
-                right: 12px !important;
+                left: 12px !important; right: 12px !important;
                 bottom: calc(75px + env(safe-area-inset-bottom)) !important;
-                max-width: none !important;
-                padding: 16px !important;
-                border-radius: 14px !important;
-            }
-
-            .legal-modal-box {
-                max-height: 90vh !important;
-                width: 95% !important;
-            }
-
-            .legal-modal-header {
-                padding: 15px !important;
-            }
-
-            .legal-modal-content {
-                padding: 16px !important;
-                font-size: 12.5px !important;
-            }
-
-            .review-form-input,
-            textarea.review-form-input {
-                font-size: 16px !important;
-                -webkit-appearance: none;
+                max-width: none !important; padding: 14px !important;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. ГОРНА МАРКЕТИНГОВА ЛЕНТА -->
     <div class="top-trust-bar">
         <span><i class="fa-solid fa-truck-fast"></i> Доставка за 24ч с Еконт / Спиди</span>
-        <span><i class="fa-solid fa-box-open"></i> Опция "Преглед" преди заплащане</span>
-        <span><i class="fa-solid fa-certificate"></i> Премиум Нано-Полимерна Хидрофобна Формула</span>
+        <span><i class="fa-solid fa-box-open"></i> Опция "Преглед" преди плащане</span>
+        <span><i class="fa-solid fa-certificate"></i> Премиум Нано-Полимер</span>
     </div>
 
-    <!-- 2. НАВИГАЦИЯ -->
     <nav>
         <div class="logo">SOFT <span>VISION</span></div>
         <div class="nav-right">
-            <a href="#offers" class="nav-btn">
-                <i class="fa-solid fa-cart-shopping"></i> Виж офертите
-            </a>
+            <a href="#offers" class="nav-btn"><i class="fa-solid fa-cart-shopping"></i> Оферти</a>
         </div>
     </nav>
 
-    <!-- 3. ГЛАВНА HERO СЕКЦИЯ -->
     <header class="hero">
         <div class="hero-content">
-
             <h1 class="hero-title">
                 ЗАЩИТА И БЛЯСЪК.
                 <span>НЕ ПРОСТО ГЛЕДАШ – ВЕЧЕ ВИЖДАШ!</span>
@@ -1732,177 +373,112 @@ html
                 Професионално полимерно водоотблъскващо покритие с активни силиконови нано-полимери. Превърни шофирането в проливен дъжд и нощна мъгла в напълно спокойно и безопасно изживяване.
             </p>
 
-            <div class="hero-guarantees">
-                <div><i class="fa-solid fa-circle-check"></i> 100% Кристална видимост над 50 км/ч без чистачки</div>
-                <div><i class="fa-solid fa-circle-check"></i> Без риск: Опция за преглед на пратката преди заплащане</div>
-                <div><i class="fa-solid fa-circle-check"></i> До 45 дни непрекъсната защита срещу водни петна, кал и насекоми</div>
-            </div>
-
             <div class="hero-buttons">
-                <a href="#offers" class="btn-primary btn-marketing">
-                    <span class="btn-main-text">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> ПОРЪЧАЙ СЕГА С -25%
-                    </span>
-                    <span class="btn-sub-text">⚡ От 12.99 € • С опция "Преглед"</span>
+                <a href="#offers" class="btn-primary">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> ПОРЪЧАЙ СЕГА С -25% (ОТ 12.99 €)
                 </a>
                 <a href="tel:0897620280" onclick="trackContactEvent('Phone Hero')" class="btn-phone">
                     <i class="fa-solid fa-phone"></i> 089 762 0280
                 </a>
             </div>
+
+            <div class="hero-guarantees">
+                <div><i class="fa-solid fa-circle-check"></i> 100% Кристална видимост над 50 км/ч без чистачки</div>
+                <div><i class="fa-solid fa-circle-check"></i> Без риск: Опция за преглед на пратката преди заплащане</div>
+                <div><i class="fa-solid fa-circle-check"></i> До 45 дни непрекъсната защита срещу петна и насекоми</div>
+            </div>
         </div>
 
-        <!-- Дясна част: Шише и характеристики -->
         <div class="showcase-container">
             <div class="bottle-wrapper">
-                
-                <a href="#water-repel" class="feature-bubble bubble-1" title="Кликни за детайли">
+                <a href="#water-repel" class="feature-bubble bubble-1">
                     <i class="fa-solid fa-droplet"></i>
-                    <div class="bubble-text">
-                        <strong>Отблъсква водата</strong>
-                        <span>Хидрофобен ефект</span>
-                    </div>
+                    <div class="bubble-text"><strong>Отблъсква водата</strong><span>Хидрофобен ефект</span></div>
                 </a>
-
-                <a href="#dirt-protect" class="feature-bubble bubble-2" title="Кликни за детайли">
+                <a href="#dirt-protect" class="feature-bubble bubble-2">
                     <i class="fa-solid fa-shield-halved"></i>
-                    <div class="bubble-text">
-                        <strong>Защита от замърсявания</strong>
-                        <span>И насекоми</span>
-                    </div>
+                    <div class="bubble-text"><strong>Без замърсявания</strong><span>И насекоми</span></div>
                 </a>
 
-                <img src="index.png" alt="Soft Vision Хидрофобен Спрей" class="bottle-img">
+                <img src="index.png" alt="Soft Vision Спрей" class="bottle-img">
                 <div class="bottle-badge"><i class="fa-solid fa-flask"></i> 250 ml • Нано-Полимерен Щит</div>
 
-                <a href="#crystal-vision" class="feature-bubble bubble-3" title="Кликни за детайли">
+                <a href="#crystal-vision" class="feature-bubble bubble-3">
                     <i class="fa-solid fa-eye"></i>
-                    <div class="bubble-text">
-                        <strong>Кристална видимост</strong>
-                        <span>В дъжд и мъгла</span>
-                    </div>
+                    <div class="bubble-text"><strong>Кристална видимост</strong><span>В дъжд и мъгла</span></div>
                 </a>
-
-                <a href="#no-streaks" class="feature-bubble bubble-4" title="Кликни за детайли">
+                <a href="#no-streaks" class="feature-bubble bubble-4">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    <div class="bubble-text">
-                        <strong>Без водни следи</strong>
-                        <span>Плътен блясък</span>
-                    </div>
+                    <div class="bubble-text"><strong>Без следи</strong><span>Плътен блясък</span></div>
                 </a>
-
             </div>
         </div>
     </header>
 
-    <!-- 4. СТЪЛБОВЕ НА ДОВЕРИЕТО -->
     <div class="trust-strip">
         <div class="trust-item">
             <div class="trust-icon"><i class="fa-solid fa-box-open"></i></div>
-            <div>
-                <h4>Опция Преглед</h4>
-                <p>Отваряш и преглеждаш пратката преди заплащане</p>
-            </div>
+            <div><h4>Опция Преглед</h4><p>Преглеждаш пратката преди да платиш</p></div>
         </div>
         <div class="trust-item">
             <div class="trust-icon"><i class="fa-solid fa-bolt"></i></div>
-            <div>
-                <h4>Експресна Доставка</h4>
-                <p>Получаваш пратката в рамките на 24 часа</p>
-            </div>
+            <div><h4>Бърза Доставка</h4><p>Получаваш до 24 часа с куриер</p></div>
         </div>
         <div class="trust-item">
             <div class="trust-icon"><i class="fa-solid fa-microscope"></i></div>
-            <div>
-                <h4>Премиум Нано-Полимер</h4>
-                <p>Безопасен за стъклата и перата на чистачките</p>
-            </div>
+            <div><h4>Нано-Полимер</h4><p>Безопасен за перата на чистачките</p></div>
         </div>
         <div class="trust-item">
             <div class="trust-icon"><i class="fa-solid fa-calendar-check"></i></div>
-            <div>
-                <h4>До 45 Дни Защита</h4>
-                <p>Месец и половина кристална видимост и хидрофобен щит</p>
-            </div>
+            <div><h4>До 45 Дни Защита</h4><p>Дълготраен хидрофобен щит</p></div>
         </div>
     </div>
 
-    <!-- 5. ПОДРОБНИ КАРТИ СЪС СВОЙСТВАТА -->
     <section class="detailed-features">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-size: 34px; font-weight: 900; text-transform: uppercase;">
-                Детайлен поглед върху <span>формулата</span>
-            </h2>
+        <div style="text-align: center; margin-bottom: 35px;">
+            <h2 style="font-weight: 900; text-transform: uppercase;">Детайлен поглед върху <span>формулата</span></h2>
         </div>
-
         <div class="detail-card" id="water-repel">
-            <div class="detail-icon-wrap">
-                <i class="fa-solid fa-droplet"></i>
-            </div>
+            <div class="detail-icon-wrap"><i class="fa-solid fa-droplet"></i></div>
             <div class="detail-info">
                 <h3>1. Мощно отблъскване на водата <span>(Хидрофобен щит)</span></h3>
-                <p>
-                    Формулата на Soft Vision създава невидим микроскопичен защитен слой върху стъклото с изключително висок ъгъл на контакт с водата. При скорост над 50 км/ч насрещният въздушен поток буквално издухва капките нагоре – шофираш спокойно дори при най-тежките бури!
-                </p>
+                <p>Създава невидим микрослой с висок ъгъл на контакт. Над 50 км/ч насрещният въздух издухва капките нагоре – шофираш спокойно при силен дъжд!</p>
             </div>
         </div>
-
         <div class="detail-card" id="dirt-protect">
-            <div class="detail-icon-wrap">
-                <i class="fa-solid fa-shield-halved"></i>
-            </div>
+            <div class="detail-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
             <div class="detail-info">
-                <h3>2. Защита от замърсявания, водни петна и насекоми</h3>
-                <p>
-                    През лятото насекомите залепват дълбоко в порите на стъклото, а при дъждовно време водните петна и калта правят прозорците замазани. Със Soft Vision нито едно замърсяване не може да прилепне плътно. Почистването става без усилие и търкане, само с едно плакнене с вода.
-                </p>
+                <h3>2. Защита от замърсявания, петна и насекоми</h3>
+                <p>Насекомите и калта не могат да залепнат за стъклото. Почистването става светкавично, само с обливане с чиста вода.</p>
             </div>
         </div>
-
         <div class="detail-card" id="crystal-vision">
-            <div class="detail-icon-wrap">
-                <i class="fa-solid fa-eye"></i>
-            </div>
+            <div class="detail-icon-wrap"><i class="fa-solid fa-eye"></i></div>
             <div class="detail-info">
                 <h3>3. Кристална оптична видимост без отблясъци</h3>
-                <p>
-                    „Не просто гледаш – вече виждаш!“. Препаратът изглажда микро-неравностите на предното стъкло и огледалата, намалявайки заслепяващите отблясъци от насрещните фарове и уличното осветление през нощта и в мъгливи условия.
-                </p>
+                <p>Препаратът изглажда микропорите на стъклото и намалява заслепяването от насрещните фарове при нощно каране в дъжд.</p>
             </div>
         </div>
-
         <div class="detail-card" id="no-streaks">
-            <div class="detail-icon-wrap">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
+            <div class="detail-icon-wrap"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
             <div class="detail-info">
-                <h3>4. Без мазни петна, бели следи и замазване</h3>
-                <p>
-                    За разлика от евтините препарати, които оставят неприятен мазен филм и карат чистачките да скърцат, полимерната формула на Soft Vision изсъхва до напълно кристален, защитен микрофилм, щадящ гумените пера на чистачките.
-                </p>
+                <h3>4. Без мазни петна, бели следи и скърцане</h3>
+                <p>За разлика от евтините препарати, Soft Vision изсъхва до напълно кристален защитен филм, който щади гумените пера на чистачките.</p>
             </div>
         </div>
     </section>
 
-    <!-- 6. СЕКЦИЯ: ИЗГОДНА ОФЕРТА (ЧИСТА И ЕЛЕГАНТНА) -->
     <section class="offer-section" id="offers">
-        <h2 style="font-size: 34px; font-weight: 900; text-transform: uppercase;">
-            Избери своя пакет <span>Soft Vision</span>
-        </h2>
-
+        <h2 style="font-weight: 900; text-transform: uppercase;">Избери своя пакет <span>Soft Vision</span></h2>
         <div class="offer-cards-wrap">
-            
-            <!-- Оферта 1 -->
             <div class="offer-card">
                 <div>
                     <h3>1x Soft Vision</h3>
-                    <p style="font-size: 13px; color: var(--text-muted);">Идеално за цялостна обработка на автомобил</p>
-                    <div class="offer-price">
-                        <span class="current-price">12.99 €</span>
-                        <span class="old-price">16.99 €</span>
-                    </div>
+                    <p style="font-size: 12.5px; color: var(--text-muted);">Идеално за цялостна обработка на автомобил</p>
+                    <div class="offer-price"><span class="current-price">12.99 €</span><span class="old-price">16.99 €</span></div>
                     <ul class="offer-features">
-                        <li><i class="fa-solid fa-check"></i> 1x Бутилка 250 ml (стига за 8 до 12 коли)</li>
-                        <li><i class="fa-solid fa-check"></i> До 45 дни активна хидрофобна защита</li>
+                        <li><i class="fa-solid fa-check"></i> 1x Бутилка 250 ml (за 8 до 12 коли)</li>
+                        <li><i class="fa-solid fa-check"></i> До 45 дни активна защита</li>
                         <li><i class="fa-solid fa-check"></i> Доставка за 24ч с опция "Преглед"</li>
                     </ul>
                 </div>
@@ -1911,37 +487,29 @@ html
                 </button>
             </div>
 
-            <!-- Оферта 2 (Препоръчан пакет) -->
             <div class="offer-card featured">
                 <div class="popular-badge">НАЙ-ИЗБИРАН ПАКЕТ</div>
                 <div>
                     <h3>2x Soft Vision</h3>
-                    <p style="font-size: 13px; color: var(--text-muted);">За 2 автомобила или дългосрочен запас</p>
-                    <div class="offer-price">
-                        <span class="current-price">22.99 €</span>
-                        <span class="old-price">25.98 €</span>
-                    </div>
+                    <p style="font-size: 12.5px; color: var(--text-muted);">За 2 автомобила или дългосрочен запас</p>
+                    <div class="offer-price"><span class="current-price">22.99 €</span><span class="old-price">25.98 €</span></div>
                     <ul class="offer-features">
                         <li><i class="fa-solid fa-check"></i> 2x Бутилки по 250 ml (общо 500 ml)</li>
                         <li><i class="fa-solid fa-check"></i> Достатъчно за над 20 нанасяния</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>СПЕСТЯВАШ 3.00 €</strong> от единичната цена</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>СПЕСТЯВАШ 3.00 €</strong></li>
                         <li><i class="fa-solid fa-check"></i> Доставка за 24ч с опция "Преглед"</li>
                     </ul>
                 </div>
-                <button onclick="selectPackageAndScroll('2x Soft Vision', '22.99 €')" class="btn-primary" style="width: 100%; justify-content: center; font-size: 15px;">
+                <button onclick="selectPackageAndScroll('2x Soft Vision', '22.99 €')" class="btn-primary" style="width: 100%; justify-content: center; font-size: 14.5px;">
                     <i class="fa-solid fa-bolt"></i> Поръчай 2 Броя
                 </button>
             </div>
 
-            <!-- Оферта 3 -->
             <div class="offer-card">
                 <div>
                     <h3>3x Soft Vision (VIP)</h3>
-                    <p style="font-size: 13px; color: var(--text-muted);">За семеен автопарк или приятели</p>
-                    <div class="offer-price">
-                        <span class="current-price">31.99 €</span>
-                        <span class="old-price">38.97 €</span>
-                    </div>
+                    <p style="font-size: 12.5px; color: var(--text-muted);">За семеен автопарк или приятели</p>
+                    <div class="offer-price"><span class="current-price">31.99 €</span><span class="old-price">38.97 €</span></div>
                     <ul class="offer-features">
                         <li><i class="fa-solid fa-check"></i> 3x Бутилки по 250 ml (общо 750 ml)</li>
                         <li><i class="fa-solid fa-check"></i> <strong>СПЕСТЯВАШ 7.00 €</strong> общо</li>
@@ -1953,36 +521,28 @@ html
                     <i class="fa-solid fa-bag-shopping"></i> Поръчай 3 Броя
                 </button>
             </div>
-
         </div>
     </section>
 
-    <!-- 7. ЦЕНТЪР ЗА ДИРЕКТНА ЗАЯВКА (ПОРЪЧКА С ГОТОВ ШАБЛОН) -->
     <section class="order-hub-section" id="order-hub">
-        <h2 style="font-size: 34px; font-weight: 900; text-transform: uppercase;">
-            Как да направите <span>своята поръчка?</span>
-        </h2>
-        <p style="color: var(--text-muted); max-width: 650px; margin: 10px auto 0; font-size: 14px;">
-            Не използваме анонимни колички и сложни регистрации. За да гарантираме перфектен резултат за твоя автомобил, приемаме всяка заявка лично. Свържи се с нас през удобния за теб канал – изпращаме за 24ч с опция „Преглед“!
+        <h2 style="font-weight: 900; text-transform: uppercase;">Как да направите <span>своята поръчка?</span></h2>
+        <p style="color: var(--text-muted); max-width: 620px; margin: 8px auto 0; font-size: 13.5px;">
+            Без сложни регистрации. Свържи се с нас през удобния за теб канал – изпращаме за 24ч с опция „Преглед“!
         </p>
 
         <div class="order-hub-box">
-            
             <div class="selected-package-indicator" id="hubSelectedPackageBadge">
                 <i class="fa-solid fa-cart-shopping"></i> Избран пакет: 1x Soft Vision (12.99 €)
             </div>
 
             <div class="channel-cards-grid">
-                
                 <a href="tel:0897620280" onclick="trackContactEvent('Phone OrderHub')" class="channel-card channel-phone">
                     <div>
                         <div class="channel-icon-wrap"><i class="fa-solid fa-phone"></i></div>
                         <h4>Обади се директно</h4>
-                        <p>Вдигаме веднага. Поръчката отнема под 30 секунди по телефона.</p>
+                        <p>Вдигаме веднага. Поръчката става за под 30 секунди по телефона.</p>
                     </div>
-                    <div class="channel-action-badge">
-                        089 762 0280 <i class="fa-solid fa-arrow-right"></i>
-                    </div>
+                    <div class="channel-action-badge">089 762 0280 <i class="fa-solid fa-arrow-right"></i></div>
                 </a>
 
                 <a href="https://instagram.com/7softvision7" target="_blank" onclick="trackContactEvent('Instagram OrderHub')" class="channel-card channel-insta">
@@ -1991,41 +551,32 @@ html
                         <h4>Instagram на лично</h4>
                         <p>Пиши ни директно на лично съобщение. Отговаряме до няколко минути.</p>
                     </div>
-                    <div class="channel-action-badge">
-                        @7softvision7 <i class="fa-solid fa-arrow-right"></i>
-                    </div>
+                    <div class="channel-action-badge">@7softvision7 <i class="fa-solid fa-arrow-right"></i></div>
                 </a>
 
                 <a href="https://facebook.com" target="_blank" onclick="trackContactEvent('Facebook OrderHub')" class="channel-card channel-fb">
                     <div>
                         <div class="channel-icon-wrap"><i class="fa-brands fa-facebook"></i></div>
                         <h4>Facebook Messenger</h4>
-                        <p>Пиши ни на нашата официална страница за бърза консултация и поръчка.</p>
+                        <p>Пиши ни на официалната ни страница за консултация и поръчка.</p>
                     </div>
-                    <div class="channel-action-badge">
-                        Soft Vision <i class="fa-solid fa-arrow-right"></i>
-                    </div>
+                    <div class="channel-action-badge">Soft Vision <i class="fa-solid fa-arrow-right"></i></div>
                 </a>
 
                 <div onclick="triggerEmailOrder()" class="channel-card channel-email">
                     <div>
                         <div class="channel-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
                         <h4>Поръчка по имейл</h4>
-                        <p>Кликваш и ти се отваря готов шаблон с попълнени данни за избрания пакет.</p>
+                        <p>Кликваш и веднага ти се отваря готов имейл с данните за избрания пакет.</p>
                     </div>
-                    <div class="channel-action-badge">
-                        SoftVision777@gmail.com <i class="fa-solid fa-arrow-right"></i>
-                    </div>
+                    <div class="channel-action-badge">SoftVision777@gmail.com <i class="fa-solid fa-arrow-right"></i></div>
                 </div>
-
             </div>
 
             <div class="copy-template-container">
                 <div class="copy-template-header">
-                    <span><i class="fa-solid fa-paste" style="color: #ff8c00;"></i> Бърз шаблон (копирай с 1 клик и ни го изпрати в Instagram или имейл):</span>
-                    <button type="button" onclick="copyOrderTemplate()" class="btn-copy-template">
-                        <i class="fa-solid fa-copy"></i> Копирай шаблона
-                    </button>
+                    <span><i class="fa-solid fa-paste" style="color: #ff8c00;"></i> Бърз шаблон (копирай с 1 клик):</span>
+                    <button type="button" onclick="copyOrderTemplate()" class="btn-copy-template"><i class="fa-solid fa-copy"></i> Копирай</button>
                 </div>
                 <div class="template-text-display" id="templatePreviewBox">
                     Здравейте! Желая да поръчам Soft Vision (1x бутилка - 12.99 €).<br>
@@ -2035,95 +586,63 @@ html
                 </div>
             </div>
 
-            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; font-size: 13px; color: var(--text-muted); font-weight: 600;">
-                <span><i class="fa-solid fa-box-open" style="color: var(--accent-green);"></i> Опция „Преглед“ преди плащане</span>
-                <span><i class="fa-solid fa-shield-halved" style="color: var(--accent-green);"></i> Без предварително плащане с карта</span>
-                <span><i class="fa-solid fa-truck" style="color: var(--accent-green);"></i> Изпращане до 24 часа</span>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; font-size: 12.5px; color: var(--text-muted); font-weight: 600;">
+                <span><i class="fa-solid fa-box-open" style="color: var(--accent-green);"></i> Опция „Преглед“</span>
+                <span><i class="fa-solid fa-shield-halved" style="color: var(--accent-green);"></i> Без плащане с карта</span>
+                <span><i class="fa-solid fa-truck" style="color: var(--accent-green);"></i> Доставка за 24ч</span>
             </div>
-
         </div>
     </section>
 
-    <!-- 8. СОЦИАЛНО ДОКАЗАТЕЛСТВО: РЕАЛНИ ОТЗИВИ С ВИДЕА -->
     <section class="reviews-section">
-        <h2 style="font-size: 34px; font-weight: 900; text-transform: uppercase;">
-            Какво казват <span>клиентите ни?</span>
-        </h2>
-
+        <h2 style="font-weight: 900; text-transform: uppercase;">Какво казват <span>клиентите ни?</span></h2>
         <div class="reviews-grid" id="reviewsContainer">
-            
             <div class="review-card">
                 <div>
                     <div class="review-stars">★★★★★</div>
-                    <p class="review-text">
-                        „Мина около месец след нанасянето на спрея. На клипа се прибирам с 80-90 от Пловдив към Хасково. Ефектът, разбира се, е леко отслабнал в сравнение с първите седмици, но въпреки това нямам нужда от чистачки!“
-                    </p>
+                    <p class="review-text">„Мина около месец след нанасянето. На клипа се прибирам с 80-90 от Пловдив към Хасково. Нямам никаква нужда от чистачки!“</p>
                     <div class="review-video-wrap">
-                        <video controls playsinline preload="metadata">
-                            <source src="video1.mp4" type="video/mp4">
-                            Вашият браузър не поддържа видео елемента.
-                        </video>
+                        <video controls playsinline preload="metadata"><source src="video1.mp4" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="reviewer-info">
                     <div class="reviewer-avatar">АВ</div>
-                    <div>
-                        <div class="reviewer-name">Александър В.</div>
-                        <div class="reviewer-car">Audi A4 (2014)</div>
-                    </div>
+                    <div><div class="reviewer-name">Александър В.</div><div class="reviewer-car">Audi A4 (2014)</div></div>
                 </div>
             </div>
 
             <div class="review-card">
                 <div>
                     <div class="review-stars">★★★★★</div>
-                    <p class="review-text">
-                        „Един месец след нанасяне в градски условия ми трябва точно един път да цъкна чистачката и веднага маха всичко. Това бачка уникално – няма размазване, няма бели следи, няма петна и няма скърцане от чистачки, а преди това ми скърцаха, нищо че са на Bosch!“
-                    </p>
+                    <p class="review-text">„Един месец след нанасяне в градски условия ми трябва точно един път да цъкна чистачката и веднага маха всичко. Това бачка уникално – няма размазване, няма бели следи и няма скърцане!“</p>
                     <div class="review-video-wrap">
-                        <video controls playsinline preload="metadata">
-                            <source src="video2.mp4" type="video/mp4">
-                            Вашият браузър не поддържа видео елемента.
-                        </video>
+                        <video controls playsinline preload="metadata"><source src="video2.mp4" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="reviewer-info">
                     <div class="reviewer-avatar">ДТ</div>
-                    <div>
-                        <div class="reviewer-name">Димитър Т.</div>
-                        <div class="reviewer-car">Mercedes ML</div>
-                    </div>
+                    <div><div class="reviewer-name">Димитър Т.</div><div class="reviewer-car">Mercedes ML</div></div>
                 </div>
             </div>
 
             <div class="review-card">
                 <div>
                     <div class="review-stars">★★★★★</div>
-                    <p class="review-text">
-                        „Първоначално бях скептичен, защото съм свикнал да давам много пари за чистачки и да им се доверявам на тях, обаче на първия дъжд, след като използвах спрея на колата ми, бях шокиран – нито един път не си пуснах чистачките! Даже качих стори на акаунта с клип как бягат капките, докато карам.“
-                    </p>
+                    <p class="review-text">„Първоначално бях скептичен, защото съм свикнал да давам много пари за чистачки. Обаче на първия дъжд бях шокиран – нито един път не ги пуснах! Даже качих стори с клип.“</p>
                     <div class="review-video-wrap">
-                        <video controls playsinline preload="metadata">
-                            <source src="video3.mp4" type="video/mp4">
-                            Вашият браузър не поддържа видео елемента.
-                        </video>
+                        <video controls playsinline preload="metadata"><source src="video3.mp4" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="reviewer-info">
                     <div class="reviewer-avatar">ПД</div>
-                    <div>
-                        <div class="reviewer-name">Петър.Д.</div>
-                        <div class="reviewer-car">Ford S-Max</div>
-                    </div>
+                    <div><div class="reviewer-name">Петър.Д.</div><div class="reviewer-car">Ford S-Max</div></div>
                 </div>
             </div>
-
         </div>
 
         <div class="add-review-box">
-            <h3 style="font-size: 20px; font-weight: 800; text-transform: uppercase;">Остави своя отзив</h3>
-            <p style="font-size: 13px; color: var(--text-muted);">Сподели опита си с останалите шофьори</p>
-
+            <h3 style="font-size: 18px; font-weight: 800; text-transform: uppercase;">Остави своя отзив</h3>
+            <p style="font-size: 12.5px; color: var(--text-muted);">Сподели опита си с останалите шофьори</p>
             <div class="star-rating-select" id="starSelector">
                 <i class="fa-solid fa-star active" data-rating="1"></i>
                 <i class="fa-solid fa-star active" data-rating="2"></i>
@@ -2131,234 +650,132 @@ html
                 <i class="fa-solid fa-star active" data-rating="4"></i>
                 <i class="fa-solid fa-star active" data-rating="5"></i>
             </div>
-
             <form id="reviewForm" onsubmit="handleReviewSubmit(event)">
                 <input type="text" id="revName" class="review-form-input" placeholder="Твоето име" required>
-                <input type="text" id="revCar" class="review-form-input" placeholder="Модел автомобил (напр. BMW E60)">
+                <input type="text" id="revCar" class="review-form-input" placeholder="Модел автомобил">
                 <textarea id="revText" class="review-form-input" placeholder="Напиши своя отзив тук..." required></textarea>
-                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
-                    Публикувай отзив
-                </button>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Публикувай отзив</button>
             </form>
         </div>
-
     </section>
 
-    <!-- 9. ЧЕСТО ЗАДАВАНИ ВЪПРОСИ (FAQ) -->
     <section class="faq-section">
-        <h2 style="font-size: 34px; font-weight: 900; text-transform: uppercase;">
-            Често задавани <span>въпроси</span>
-        </h2>
-
+        <h2 style="font-weight: 900; text-transform: uppercase;">Често задавани <span>въпроси</span></h2>
         <div class="faq-wrap">
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Как точно се нанася Soft Vision?</span>
-                    <i class="fa-solid fa-circle-question"></i>
-                </div>
-                <div class="faq-answer">
-                    Изключително лесно в 3 бързи стъпки: <br>
-                    1. Измийте и подсушете добре стъклото.<br>
-                    2. <strong>Разклатете добре бутилката преди употреба</strong> и впръскайте равномерно по повърхността.<br>
-                    3. <strong>Изчакайте точно 30 секунди</strong> формулата да се захване здраво за стъклото, след което забършете и полирайте със суха микрофибърна кърпа.
-                </div>
+                <div class="faq-question"><span>Как точно се нанася Soft Vision?</span><i class="fa-solid fa-circle-question"></i></div>
+                <div class="faq-answer">1. Измийте и подсушете стъклото.<br>2. Разклатете бутилката и впръскайте равномерно.<br>3. Изчакайте точно 30 секунди и полирайте със суха микрофибърна кърпа.</div>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Колко време издържа защитният ефект?</span>
-                    <i class="fa-solid fa-circle-question"></i>
-                </div>
-                <div class="faq-answer">
-                    С едно правилно нанасяне Soft Vision осигурява <strong>до 45 дни (месец и половина)</strong> активен хидрофобен слой, който отблъсква дъжда, предотвратява засъхването на водни петна и не позволява на насекомите да залепват.
-                </div>
+                <div class="faq-question"><span>Колко време издържа ефектът?</span><i class="fa-solid fa-circle-question"></i></div>
+                <div class="faq-answer">С едно нанасяне осигурява <strong>до 45 дни</strong> активен хидрофобен слой, отблъскващ дъжда и предпазващ от засъхване на насекоми.</div>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>За колко автомобила стига една бутилка от 250 ml?</span>
-                    <i class="fa-solid fa-circle-question"></i>
-                </div>
-                <div class="faq-answer">
-                    Благодарение на високата концентрация на формулата, една бутилка от 250 ml стига за <strong>8 до 12 цялостни нанасяния</strong> на всички стъкла и огледала на стандартен автомобил (достатъчно за над година и половина редовна употреба).
-                </div>
+                <div class="faq-question"><span>За колко коли стига една бутилка?</span><i class="fa-solid fa-circle-question"></i></div>
+                <div class="faq-answer">Една бутилка от 250 ml стига за <strong>8 до 12 цялостни нанасяния</strong> на всички стъкла и огледала (достатъчно за над година и половина).</div>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Вреди ли формулата на перата на чистачките?</span>
-                    <i class="fa-solid fa-circle-question"></i>
-                </div>
-                <div class="faq-answer">
-                    Категорично не. Полимерният защитен слой изглажда микропорите на стъклото, намалява триенето и предпазва гумените пера от износване, като елиминира досадното скърцане.
-                </div>
+                <div class="faq-question"><span>Вреди ли на перата на чистачките?</span><i class="fa-solid fa-circle-question"></i></div>
+                <div class="faq-answer">Категорично не. Полимерният слой намалява триенето и предпазва гумените пера от износване, като елиминира скърцането.</div>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Как се извършва плащането и доставката?</span>
-                    <i class="fa-solid fa-circle-question"></i>
-                </div>
-                <div class="faq-answer">
-                    Изпращаме чрез Еконт или Спиди с доставка до 24 часа. Плащането става чрез наложен платеж (Пощенски паричен превод) след като отворите пратката и се уверите, че всичко е наред (опция "Преглед").
-                </div>
+                <div class="faq-question"><span>Как се извършва плащането?</span><i class="fa-solid fa-circle-question"></i></div>
+                <div class="faq-answer">Изпращаме с Еконт или Спиди за 24ч. Плащането става чрез наложен платеж (Пощенски паричен превод) след опция "Преглед".</div>
             </div>
         </div>
     </section>
 
-    <!-- 10. ПРЕДПОСЛЕДНА СЕКЦИЯ: ИМАТЕ ВЪПРОСИ? -->
     <section class="help-support-section">
         <div class="help-container">
-            <h2 class="help-title">
-                Имате въпроси? <span>Ние сме тук да ви помогнем!</span>
-            </h2>
-            <p class="help-desc">
-                Независимо дали се чудите за правилната подготовка на стъклото, съвместимостта с чистачки или детайли около куриерската доставка — нашият екип отговаря бързо и компетентно.
-            </p>
-
-            <h3 class="help-subtitle">Свържете се с нас по удобен за вас начин!</h3>
-
+            <h2 style="font-weight: 900; text-transform: uppercase;">Имате въпроси? <span>Ние сме тук да помогнем!</span></h2>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin: 8px auto 20px;">Нашият екип отговаря бързо и компетентно на всяко запитване.</p>
             <div class="help-cards-grid">
                 <a href="tel:0897620280" onclick="trackContactEvent('Phone Help')" class="help-card">
-                    <div>
-                        <div class="help-icon-wrap" style="background: rgba(37, 211, 102, 0.15); color: #25d366;">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <h4>Телефонна консултация</h4>
-                        <p>Обадете ни се директно за незабавен отговор на всеки въпрос.</p>
-                    </div>
-                    <div class="help-action-badge">
-                        089 762 0280 <i class="fa-solid fa-arrow-right"></i>
-                    </div>
+                    <div class="help-icon-wrap" style="background: rgba(37, 211, 102, 0.15); color: #25d366;"><i class="fa-solid fa-phone"></i></div>
+                    <h4>Телефон</h4><p>Обадете ни се за незабавен отговор.</p><span class="help-action-badge">089 762 0280</span>
                 </a>
-
                 <a href="https://instagram.com/7softvision7" target="_blank" onclick="trackContactEvent('Instagram Help')" class="help-card">
-                    <div>
-                        <div class="help-icon-wrap" style="background: rgba(225, 48, 108, 0.15); color: #e1306c;">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <h4>Instagram</h4>
-                        <p>Пишете ни лично съобщение – отговаряме за минути с видео и съвети.</p>
-                    </div>
-                    <div class="help-action-badge">
-                        @7softvision7 <i class="fa-solid fa-arrow-right"></i>
-                    </div>
+                    <div class="help-icon-wrap" style="background: rgba(225, 48, 108, 0.15); color: #e1306c;"><i class="fa-brands fa-instagram"></i></div>
+                    <h4>Instagram</h4><p>Пишете ни на лично съобщение.</p><span class="help-action-badge">@7softvision7</span>
                 </a>
-
-                <div onclick="triggerEmailInquiry()" class="help-card" style="cursor: pointer;">
-                    <div>
-                        <div class="help-icon-wrap" style="background: rgba(0, 180, 216, 0.15); color: var(--blue-glow);">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <h4>Имейл запитване</h4>
-                        <p>Изпратете ни писмо, ако имате по-специфичен технически въпрос.</p>
-                    </div>
-                    <div class="help-action-badge">
-                        SoftVision777@gmail.com <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <div class="help-card help-card-disabled">
-                    <div>
-                        <div class="help-icon-wrap" style="background: rgba(24, 119, 242, 0.15); color: #3b82f6;">
-                            <i class="fa-brands fa-facebook"></i>
-                        </div>
-                        <h4>Facebook страница</h4>
-                        <p>Нашата официална общност във Facebook се подготвя.</p>
-                    </div>
-                    <div class="help-action-badge" style="color: var(--text-muted);">
-                        Очаквайте скоро <i class="fa-solid fa-clock"></i>
-                    </div>
+                <div onclick="triggerEmailInquiry()" class="help-card">
+                    <div class="help-icon-wrap" style="background: rgba(0, 180, 216, 0.15); color: var(--blue-glow);"><i class="fa-solid fa-envelope"></i></div>
+                    <h4>Имейл</h4><p>Изпратете ни технически въпрос.</p><span class="help-action-badge">SoftVision777@gmail.com</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 11. ПОСЛЕДЕН CTA БАНЕР -->
     <div class="cta-banner">
-        <h2 style="font-size: 30px; margin-bottom: 10px;">Готов ли си за безупречна видимост на пътя?</h2>
-        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 20px;">
-            Избери своя пакет с бърза доставка за 24ч и опция за преглед преди плащане.
-        </p>
-
+        <h2 style="font-size: 26px; margin-bottom: 8px;">Готов ли си за кристална видимост?</h2>
+        <p style="color: var(--text-muted); font-size: 13px;">Поръчай с бърза доставка за 24ч и преглед преди плащане.</p>
         <div class="social-buttons">
-            <a href="#offers" class="soc-btn soc-cta-gold">
-                <i class="fa-solid fa-bolt"></i> Избери своя пакет
-            </a>
-            <a href="tel:0897620280" onclick="trackContactEvent('Phone BottomCTA')" class="soc-btn soc-call">
-                <i class="fa-solid fa-phone"></i> 089 762 0280
-            </a>
+            <a href="#offers" class="btn-primary"><i class="fa-solid fa-bolt"></i> Избери своя пакет</a>
         </div>
     </div>
 
-    <!-- 12. ФУТЪР С ПЪЛНИ ЗАКОНОВИ ЛИНКОВЕ -->
     <footer>
         <p>&copy; 2026 Soft Vision. Всички права запазени.</p>
-        <p style="margin-top: 5px; font-size: 12px;">Телефон: 089 762 0280 | Имейл: SoftVision777@gmail.com</p>
+        <p style="margin-top: 4px; font-size: 11.5px;">Тел: 089 762 0280 | Имейл: SoftVision777@gmail.com</p>
 
         <div class="legal-footer-links">
             <button type="button" class="legal-link-btn" onclick="openLegalModal('company')">Данни за търговеца</button>
             <button type="button" class="legal-link-btn" onclick="openLegalModal('terms')">Общи условия</button>
-            <button type="button" class="legal-link-btn" onclick="openLegalModal('privacy')">Политика за поверителност (GDPR)</button>
+            <button type="button" class="legal-link-btn" onclick="openLegalModal('privacy')">Поверителност (GDPR)</button>
             <button type="button" class="legal-link-btn" onclick="openLegalModal('returns')">Връщане и отказ</button>
             <button type="button" class="legal-link-btn" onclick="openLegalModal('clp')">Състав и безопасност (CLP)</button>
-            <button type="button" class="legal-link-btn" onclick="forceOpenCookieNotice()" style="color: #ff9d24; font-weight: 800;"><i class="fa-solid fa-cookie-bite"></i> Бисквитки</button>
         </div>
-
-        <p style="font-size: 11px; opacity: 0.7;">
-            Търговец / Собственик и оператор на уебсайта Soft Vision: „ЕЛ енд ДИ 2008“ ЕООД | ЕИК: 202720970
-        </p>
+        <p style="font-size: 10.5px; opacity: 0.7;">Търговец / Собственик и оператор: „ЕЛ енд ДИ 2008“ ЕООД | ЕИК: 202720970</p>
     </footer>
 
-    <!-- 13. МОДАЛЕН ЮРИДИЧЕСКИ ПРОЗОРЕЦ -->
     <div class="legal-modal-overlay" id="legalModalOverlay" onclick="closeLegalModalOnBackdrop(event)">
         <div class="legal-modal-box">
-            
             <div class="legal-modal-header">
                 <h3 id="legalModalTitle"><i class="fa-solid fa-scale-balanced" style="color: var(--blue-glow);"></i> Правна информация</h3>
                 <button type="button" class="btn-close-modal" onclick="closeLegalModal()">&times;</button>
             </div>
-
             <div class="legal-modal-tabs">
-                <button type="button" class="modal-tab-btn" id="tabBtn-company" onclick="switchLegalTab('company')">Данни за търговеца</button>
+                <button type="button" class="modal-tab-btn" id="tabBtn-company" onclick="switchLegalTab('company')">Търговец</button>
                 <button type="button" class="modal-tab-btn" id="tabBtn-terms" onclick="switchLegalTab('terms')">Общи условия</button>
-                <button type="button" class="modal-tab-btn" id="tabBtn-privacy" onclick="switchLegalTab('privacy')">Поверителност (GDPR)</button>
-                <button type="button" class="modal-tab-btn" id="tabBtn-returns" onclick="switchLegalTab('returns')">Връщане и отказ</button>
-                <button type="button" class="modal-tab-btn" id="tabBtn-clp" onclick="switchLegalTab('clp')">Състав и CLP</button>
-                <button type="button" class="modal-tab-btn" id="tabBtn-cookies" onclick="switchLegalTab('cookies')">Бисквитки</button>
+                <button type="button" class="modal-tab-btn" id="tabBtn-privacy" onclick="switchLegalTab('privacy')">Поверителност</button>
+                <button type="button" class="modal-tab-btn" id="tabBtn-returns" onclick="switchLegalTab('returns')">Отказ</button>
+                <button type="button" class="modal-tab-btn" id="tabBtn-clp" onclick="switchLegalTab('clp')">Състав (CLP)</button>
             </div>
-
             <div class="legal-modal-content" id="legalModalBody"></div>
-
         </div>
     </div>
 
-    <!-- 14. ЗАКОНЕН GDPR БАНЕР ЗА БИСКВИТКИ (НЕ СЕ БЛОКИРА ОТ ADBLOCK) -->
+    <!-- БАНЕР ЗА БИСКВИТКИ -->
     <div class="sv-notice-panel" id="svNoticePanel">
-        <div class="sv-notice-title">
-            <i class="fa-solid fa-cookie-bite" style="color: #ff9d24;"></i> Настройки за бисквитки
-        </div>
+        <div class="sv-notice-title"><i class="fa-solid fa-cookie-bite" style="color: #ff9d24;"></i> Настройки за бисквитки</div>
         <p class="sv-notice-text">
-            Този уебсайт използва технически бисквитки за коректна работа и проследяващ пиксел за измерване на ефективността на рекламите ни в Meta/TikTok. Можете да приемете или откажете маркетинговото проследяване.
+            Този сайт използва технически бисквитки и маркетингов пиксел (Meta Pixel) за измерване на рекламите. Можете да приемете или откажете.
         </p>
         <div class="sv-notice-actions">
-            <button type="button" class="btn-sv-accept" onclick="acceptCookies()">Приемам всички</button>
+            <button type="button" class="btn-sv-accept" onclick="acceptCookies()">Приемам</button>
             <button type="button" class="btn-sv-reject" onclick="rejectCookies()">Отказвам</button>
         </div>
     </div>
 
-    <!-- 15. МОБИЛЕН СТИКИ БАР -->
     <div class="mobile-sticky-bar">
-        <a href="#offers" class="mobile-btn-order">
-            <i class="fa-solid fa-bolt"></i> ВИЖ ОФЕРТИТЕ (ОТ 12.99 €)
-        </a>
-        <a href="tel:0897620280" onclick="trackContactEvent('Phone MobileSticky')" class="mobile-btn-call">
-            <i class="fa-solid fa-phone"></i>
-        </a>
+        <a href="#offers" class="mobile-btn-order"><i class="fa-solid fa-bolt"></i> ВИЖ ОФЕРТИТЕ (ОТ 12.99 €)</a>
+        <a href="tel:0897620280" onclick="trackContactEvent('Phone MobileSticky')" class="mobile-btn-call"><i class="fa-solid fa-phone"></i></a>
     </div>
 
-    <!-- JAVASCRIPT ЛОГИКА -->
     <script>
+        // Гарантираме изчистване на локалния запис при всяко ново отваряне
+        try {
+            localStorage.removeItem('sv_cookie_consent');
+        } catch (e) {}
+
+        // Банерът се показва гарантирано
+        window.addEventListener('DOMContentLoaded', function() {
+            var panel = document.getElementById('svNoticePanel');
+            if (panel) {
+                panel.style.setProperty('display', 'block', 'important');
+            }
+        });
+
         let currentSelectedPackage = '1x Soft Vision';
         let currentSelectedPrice = '12.99 €';
 
@@ -2370,80 +787,57 @@ html
                 `<i class="fa-solid fa-cart-shopping"></i> Избран пакет: <strong>${currentSelectedPackage} (${currentSelectedPrice})</strong>`;
 
             document.getElementById('templatePreviewBox').innerHTML = 
-                `Здравейте! Желая да поръчам Soft Vision (${currentSelectedPackage} - ${currentSelectedPrice}).<br>
-• Име и Фамилия: ...<br>
-• Телефон за връзка: ...<br>
-• Град и офис на Еконт / Спиди: ...`;
+                `Здравейте! Желая да поръчам Soft Vision (${currentSelectedPackage} - ${currentSelectedPrice}).<br>• Име и Фамилия: ...<br>• Телефон за връзка: ...<br>• Град и офис на Еконт / Спиди: ...`;
 
             if (typeof fbq === 'function') {
-                fbq('track', 'InitiateCheckout', {
-                    content_name: currentSelectedPackage,
-                    value: parseFloat(currentSelectedPrice),
-                    currency: 'EUR'
-                });
+                fbq('track', 'InitiateCheckout', { content_name: currentSelectedPackage, value: parseFloat(currentSelectedPrice), currency: 'EUR' });
             }
 
-            const orderHub = document.getElementById('order-hub');
-            orderHub.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('order-hub').scrollIntoView({ behavior: 'smooth' });
         }
 
         function copyOrderTemplate() {
-            const template = 
-`Здравейте! Желая да поръчам Soft Vision (${currentSelectedPackage} - ${currentSelectedPrice}).
-• Име и Фамилия: 
-• Телефон: 
-• Град и удобен офис на Еконт / Спиди: `;
-
+            const template = `Здравейте! Желая да поръчам Soft Vision (${currentSelectedPackage} - ${currentSelectedPrice}).\n• Име и Фамилия: \n• Телефон: \n• Град и офис на Еконт / Спиди: `;
             navigator.clipboard.writeText(template).then(() => {
-                alert('Готовият шаблон е копиран в клипборда! Можете да го поставите директно в Instagram, Viber или имейл.');
+                alert('Готовият шаблон е копиран!');
             }).catch(() => {
-                alert('Можете да се свържете с нас директно на телефон 089 762 0280 или в Instagram @7softvision7');
+                alert('Свържете се с нас на тел. 089 762 0280');
             });
         }
 
         function triggerEmailOrder() {
             const email = 'SoftVision777@gmail.com';
-            const subject = encodeURIComponent(`Заявка за поръчка: ${currentSelectedPackage} (${currentSelectedPrice})`);
-            const body = encodeURIComponent(
-`Здравейте, желая да поръчам Soft Vision!
-
-Избран пакет: ${currentSelectedPackage} (${currentSelectedPrice})
-
-Данни за доставка с Еконт / Спиди:
-• Име и Фамилия: 
-• Телефон за връзка: 
-• Град и удобен офис на куриера (или личен адрес): 
-
-Благодаря!`
-            );
+            const subject = encodeURIComponent(`Заявка за Soft Vision: ${currentSelectedPackage} (${currentSelectedPrice})`);
+            const body = encodeURIComponent(`Здравейте, желая да поръчам Soft Vision!\n\nИзбран пакет: ${currentSelectedPackage} (${currentSelectedPrice})\n\nДанни за доставка с Еконт / Спиди:\n• Име и Фамилия: \n• Телефон за връзка: \n• Град и офис на куриера: \n\nБлагодаря!`);
             trackContactEvent('Email Order');
-            openEmailClient(email, subject, body);
+
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
+
+            if (isMobile) {
+                window.location.href = mailtoUrl;
+            } else {
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+                const win = window.open(gmailUrl, '_blank');
+                if (!win) window.location.href = mailtoUrl;
+            }
         }
 
         function triggerEmailInquiry() {
             const email = 'SoftVision777@gmail.com';
             const subject = encodeURIComponent('Въпрос относно Soft Vision');
-            const body = encodeURIComponent(
-`Здравейте, екип на Soft Vision!
-
-Пиша ви с въпрос относно:
-[Напишете вашето запитване тук...]
-
-Поздрави!`
-            );
+            const body = encodeURIComponent(`Здравейте, имам въпрос относно Soft Vision:\n\n[Напишете въпроса тук...]\n\nПоздрави!`);
             trackContactEvent('Email Inquiry');
-            openEmailClient(email, subject, body);
-        }
 
-        function openEmailClient(email, subject, body) {
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
             const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-            if (!isMobile) {
-                const gmailWeb = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
-                window.open(gmailWeb, '_blank');
-            } else {
+            if (isMobile) {
                 window.location.href = mailtoUrl;
+            } else {
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+                const win = window.open(gmailUrl, '_blank');
+                if (!win) window.location.href = mailtoUrl;
             }
         }
 
@@ -2453,59 +847,28 @@ html
             }
         }
 
-        // Звезден рейтинг
         let currentRating = 5;
-        const stars = document.querySelectorAll('#starSelector i');
-        stars.forEach(star => {
+        document.querySelectorAll('#starSelector i').forEach(star => {
             star.addEventListener('click', function() {
                 currentRating = parseInt(this.getAttribute('data-rating'));
-                stars.forEach((s, idx) => {
-                    if (idx < currentRating) {
-                        s.classList.add('active');
-                    } else {
-                        s.classList.remove('active');
-                    }
+                document.querySelectorAll('#starSelector i').forEach((s, idx) => {
+                    s.classList.toggle('active', idx < currentRating);
                 });
             });
         });
 
         function handleReviewSubmit(e) {
             e.preventDefault();
-            alert('Искренно се извиняваме но тази функция все още не е  налична!');
+            alert('Искрено се извиняваме, но тази функция все още не е налична!');
             document.getElementById('reviewForm').reset();
         }
 
-        // ==========================================================================
-        // БИСКВИТКИ: ГАРАНТИРАНО СТАРТИРАНЕ (БЕЗ БЛОКИРАНЕ ОТ ADBLOCK)
-        // ==========================================================================
-        function initCookieNotice() {
-            const consent = localStorage.getItem('sv_cookie_consent');
-            const panel = document.getElementById('svNoticePanel');
-            if (!panel) return;
-
-            if (consent === 'accepted') {
-                if (typeof fbq === 'function') {
-                    fbq('consent', 'grant');
-                    fbq('track', 'PageView');
-                }
-                panel.style.setProperty('display', 'none', 'important');
-            } else if (consent === 'rejected') {
-                if (typeof fbq === 'function') {
-                    fbq('consent', 'revoke');
-                }
-                panel.style.setProperty('display', 'none', 'important');
-            } else {
-                // Първо посещение: банерът изскача на момента
-                setTimeout(() => {
-                    panel.style.setProperty('display', 'block', 'important');
-                }, 300);
-            }
-        }
-
+        // БЕЗОТКАЗНО ЗАТВАРЯНЕ ПРИ КЛИК
         function acceptCookies() {
-            localStorage.setItem('sv_cookie_consent', 'accepted');
-            const panel = document.getElementById('svNoticePanel');
-            if (panel) panel.style.setProperty('display', 'none', 'important');
+            var panel = document.getElementById('svNoticePanel');
+            if (panel) {
+                panel.style.setProperty('display', 'none', 'important');
+            }
             if (typeof fbq === 'function') {
                 fbq('consent', 'grant');
                 fbq('track', 'PageView');
@@ -2513,127 +876,62 @@ html
         }
 
         function rejectCookies() {
-            localStorage.setItem('sv_cookie_consent', 'rejected');
-            const panel = document.getElementById('svNoticePanel');
-            if (panel) panel.style.setProperty('display', 'none', 'important');
+            var panel = document.getElementById('svNoticePanel');
+            if (panel) {
+                panel.style.setProperty('display', 'none', 'important');
+            }
             if (typeof fbq === 'function') {
                 fbq('consent', 'revoke');
             }
         }
 
-        // Извиква се при клик на "Бисквитки" във футъра (изчиства паметта и отваря банера за тест)
-        function forceOpenCookieNotice() {
-            localStorage.removeItem('sv_cookie_consent');
-            const panel = document.getElementById('svNoticePanel');
-            if (panel) {
-                panel.style.setProperty('display', 'block', 'important');
-            }
-        }
-
-        // Старт веднага
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initCookieNotice);
-        } else {
-            initCookieNotice();
-        }
-
-        // ==========================================================================
-        // ЮРИДИЧЕСКА СИСТЕМА
-        // ==========================================================================
         const legalTexts = {
             company: `
                 <h4>Информация съгласно чл. 4 от Закона за електронната търговия (ЗЕТ):</h4>
                 <div class="legal-highlight-box">
-                    <strong>Търговец / Собственик и оператор на уебсайта Soft Vision:</strong> „ЕЛ енд ДИ 2008“ ЕООД<br>
+                    <strong>Търговец / Собственик и оператор:</strong> „ЕЛ енд ДИ 2008“ ЕООД<br>
                     <strong>ЕИК / БУЛСТАТ:</strong> 202720970<br>
-                    <strong>Седалище и адрес на управление:</strong> България, гр. Хасково, ж.к. „Изток“ бл. 12<br>
+                    <strong>Седалище и адрес:</strong> България, гр. Хасково, ж.к. „Изток“ бл. 12<br>
                     <strong>Управител (МОЛ):</strong> Елизавета Жекова<br>
-                    <strong>Телефон за връзка:</strong> 089 762 0280<br>
-                    <strong>Имейл за кореспонденция:</strong> SoftVision777@gmail.com<br>
-                    <strong>Регистрация по ЗДДС:</strong> Не (фирмата не е регистрирана по Закона за ДДС, цените на сайта са крайни).
+                    <strong>Тел.:</strong> 089 762 0280 | <strong>Имейл:</strong> SoftVision777@gmail.com<br>
+                    <strong>Регистрация по ЗДДС:</strong> Не (цените са крайни).
                 </div>
-                <h4>Компетентни надзорни органи в Република България:</h4>
-                <p><strong>Комисия за защита на потребителите (КЗП)</strong><br>
-                Адрес: гр. София 1000, ул. „Врабча“ № 1, ет. 3, 4 и 5<br>
-                Гореща телефонна линия: 0700 111 22 | Уебсайт: <a href="https://kzp.bg" target="_blank" style="color:var(--blue-glow);">www.kzp.bg</a></p>
-
-                <p><strong>Комисия за защита на личните данни (КЗЛД)</strong><br>
-                Адрес: гр. София 1592, бул. „Проф. Цветан Лазаров” № 2<br>
-                Тел.: 02 / 91 53 519 | Имейл: kzld@cpdp.bg | Уебсайт: <a href="https://cpdp.bg" target="_blank" style="color:var(--blue-glow);">www.cpdp.bg</a></p>
-
-                <p><strong>Европейска платформа за онлайн решаване на спорове (ОРС):</strong><br>
-                <a href="https://ec.europa.eu/consumers/odr" target="_blank" style="color:var(--blue-glow);">https://ec.europa.eu/consumers/odr</a></p>
+                <p><strong>КЗП:</strong> София, ул. „Врабча“ 1 | Тел: 0700 111 22 | www.kzp.bg<br>
+                <strong>КЗЛД:</strong> София, бул. „Проф. Цветан Лазаров” 2 | www.cpdp.bg</p>
             `,
             terms: `
                 <h4>Общи условия за покупко-продажба от разстояние</h4>
-                <p><strong>1. Общи положения:</strong> Настоящите условия уреждат взаимоотношенията между Търговеца („ЕЛ енд ДИ 2008“ ЕООД, ЕИК 202720970) и всеки Потребител, отправил заявка за стоки чрез сайта Soft Vision.</p>
-                <p><strong>2. Сключване на договор от разстояние:</strong> Поръчките се приемат чрез директна комуникация (телефон, електронна поща или социални мрежи). Договорът за продажба от разстояние се счита за сключен от момента на изричното потвърждаване на поръчката между страните и/или предаването ѝ за куриерска доставка.</p>
-                <p><strong>3. Цени и начин на плащане:</strong> Всички посочени на сайта цени са крайни. Заплащането се извършва при доставка чрез наложен платеж (Пощенски паричен превод съгласно Наредба Н-18 на НАП). Куриерът издава на клиента разписка за пощенски паричен превод, която представлява законоустановен фискален документ, заместващ касовата бележка.</p>
-                <p><strong>4. Доставка и опция „Преглед“:</strong> Доставката се извършва в рамките на 24 до 48 часа чрез куриерски компании Еконт Експрес или Спиди. Всяка пратка задължително пътува с включена опция за предварителен преглед преди заплащане.</p>
-                <p><strong>5. Законова гаранция:</strong> Всички стоки разполагат със законова гаранция за съответствие съгласно приложимото законодателство за защита на потребителите в Република България.</p>
+                <p><strong>1. Договор:</strong> Сключва се при потвърждение по телефон, имейл или съобщение между Търговеца („ЕЛ енд ДИ 2008“ ЕООД) и Потребителя.</p>
+                <p><strong>2. Плащане:</strong> Наложен платеж (Пощенски паричен превод съгласно Наредба Н-18 на НАП). Разписката от куриера замества касовия бон.</p>
+                <p><strong>3. Доставка:</strong> До 24-48 часа с Еконт или Спиди със задължителна опция "Преглед" преди заплащане.</p>
             `,
             privacy: `
                 <h4>Политика за защита на личните данни (GDPR)</h4>
-                <p><strong>1. Администратор на данни:</strong> „ЕЛ енд ДИ 2008“ ЕООД, ЕИК 202720970, обработва предоставените от Вас данни в стриктно съответствие с Регламент (ЕС) 2016/679 (GDPR) и ЗЗЛД.</p>
-                <p><strong>2. Какви данни събираме:</strong> Име и фамилия, телефон за връзка и населено място/офис за доставка, предоставени лично и доброволно от Вас при отправяне на заявка.</p>
-                <p><strong>3. Цели и основание:</strong> Данните се обработват единствено на основание чл. 6, ал. 1, б. "б" от GDPR (изпълнение на заявката и доставката) и за спазване на законови счетоводни задължения (чл. 6, ал. 1, б. "в").</p>
-                <p><strong>4. Споделяне с трети страни:</strong> Данните се предоставят единствено на лицензираните куриерски оператори (Еконт Експрес ООД / Спиди АД) за целите на транспортирането. Данните НЕ се продават, НЕ се отдават на трети лица за маркетинг и НЕ се предават извън ЕС/ЕИП.</p>
-                <p><strong>5. Вашите права:</strong> Имате право на достъп, коригиране, изтриване („право да бъдеш забравен“), ограничаване на обработването и право на жалба до надзорния орган – Комисия за защита на личните данни (КЗЛД).</p>
+                <p>„ЕЛ енд ДИ 2008“ ЕООД обработва предоставените от Вас данни (име, телефон, адрес за куриер) единствено за изпълнение на доставката. Данните се предоставят само на лицензирания куриер (Еконт / Спиди) и не се предоставят на трети лица.</p>
             `,
             returns: `
-                <h4>Право на отказ от договора и рекламации</h4>
-                <p><strong>1. Срок за отказ:</strong> Потребителят има право да се откаже от договора от разстояние в 14-дневен срок от приемане на пратката съгласно чл. 50 от ЗЗП.</p>
-                
+                <h4>Право на отказ и рекламации</h4>
+                <p>Потребителят има право на отказ в 14-дневен срок съгласно чл. 50 от ЗЗП.</p>
                 <div class="legal-highlight-box" style="border-left-color: #ff8c00;">
-                    <strong>ВАЖНО ИЗКЛЮЧЕНИЕ СЪГЛАСНО ЧЛ. 57, Т. 5 ОТ ЗЗП:</strong><br>
-                    Поради естеството на продукта като полимерен препарат за автостъкла, <strong>правото на отказ важи ЕДИНСТВЕНО ако флаконът е в първоначалния си фабричен вид – НЕ е разпечатван, НЕ е тестван/употребяван и защитната цялост на спрей механизма не е нарушена</strong>. Разпечатани и тествани бутилки не подлежат на връщане по съображения за защита на здравето и безопасността.
+                    <strong>ВАЖНО (чл. 57, т. 5 от ЗЗП):</strong> Поради естеството на продукта като полимерен автопрепарат, <strong>правото на отказ важи само ако флаконът НЕ е разпечатван, тестван или употребяван</strong>.
                 </div>
-
-                <p><strong>2. Как да заявите отказ:</strong> За да упражните правото си на отказ за неразпечатан продукт, е достатъчно да ни уведомите на имейл: <strong>SoftVision777@gmail.com</strong> или на тел. <strong>089 762 0280</strong>. Транспортните разходи за връщане са за сметка на купувача (чл. 55, ал. 2 от ЗЗП).</p>
-
-                <h4>Стандартен формуляр за отказ (може да копирате и изпратите по имейл):</h4>
                 <div class="form-copy-box">
-До: „ЕЛ енд ДИ 2008“ ЕООД, гр. Хасково, ж.к. Изток 12, имейл: SoftVision777@gmail.com<br>
-С настоящото уведомявам, че се отказвам от сключения от мен договор за покупка на: Soft Vision 250ml.<br>
-• Дата на поръчка / получаване: ...<br>
-• Име и фамилия на потребителя: ...<br>
-• Телефон за контакт: ...<br>
-• Банкова сметка (IBAN) за възстановяване на сумата: ...
+                    До: „ЕЛ енд ДИ 2008“ ЕООД, гр. Хасково, ж.к. Изток 12, имейл: SoftVision777@gmail.com<br>
+                    С настоящото заявявам отказ от покупката на: Soft Vision 250ml.<br>
+                    • Име: ... • Телефон: ... • IBAN сметка: ...
                 </div>
             `,
             clp: `
                 <h4>Информация за състава и безопасността (CLP Регламент № 1272/2008)</h4>
                 <div class="legal-highlight-box">
-                    <strong>Търговско наименование:</strong> Soft Vision Glass Hydrophobic Coating (250 ml)<br>
-                    <strong>Предназначение:</strong> Хидрофобно полимерно покритие за автомобилни стъкла и огледала.<br>
-                    <strong>Състав и активни вещества:</strong><br>
+                    <strong>Състав:</strong><br>
                     • Силиконово масло (CAS № 9016-00-6): 15% – 40%<br>
                     • Емулсии (CAS № 9003-05-8): 5% – 10%<br>
                     • Консерванти (DMDM Hydantoin, CAS № 6440-58-0): < 5%<br>
                     • Дейонизирана водна база: до 100%
                 </div>
-
-                <h4>Препоръки за безопасност (P-фрази):</h4>
-                <p>• <strong>P102:</strong> Да се съхранява извън обсега на деца.<br>
-                • <strong>P262:</strong> Да се избягва контакт с очите, кожата или облеклото.<br>
-                • <strong>P305 + P351 + P338:</strong> ПРИ КОНТАКТ С ОЧИТЕ: Промивайте внимателно с вода в продължение на няколко минути. Свалете контактните лещи, ако има такива и доколкото това е възможно. Продължете с изплакването.<br>
-                • <strong>P501:</strong> Изхвърлете съдържанието/опаковката в съответствие с местните наредби за битови отпадъци.</p>
-
-                <h4>Условия за съхранение:</h4>
-                <p>Да се съхранява в плътно затворена оригинална опаковка на сухо, проветриво и хладно място при температура от +5°C до +30°C. Да не се излага на пряка слънчева светлина и да се пази от замръзване.</p>
-
-                <p style="font-size: 12px; color: var(--blue-glow); margin-top: 15px;">
-                    <i class="fa-solid fa-file-shield"></i> Информационен лист за безопасност (ИЛБ / Safety Data Sheet) се предоставя при поискване от потребителя на електронна поща: SoftVision777@gmail.com
-                </p>
-            `,
-            cookies: `
-                <h4>Политика за бисквитките (Cookies)</h4>
-                <p>Настоящият уебсайт използва следните категории технологии за съхранение на данни:</p>
-                <ul>
-                    <li><strong>1. Необходими технически сесии:</strong> Служат за коректното функциониране на интерфейса, визуалните ефекти и запаметяването на Вашия избор за поверителност. Те не съдържат лични данни и не могат да бъдат деактивирани.</li>
-                    <li><strong>2. Маркетингов пиксел (Meta Pixel):</strong> Използва се за измерване на ефективността на рекламите в мрежите на Meta (Facebook и Instagram). Той се активира <em>ЕДИНСТВЕНО след Вашето изрично съгласие</em> чрез бутона „Приемам всички“.</li>
-                </ul>
-                <p>Можете по всяко време да промените или оттеглите своето съгласие чрез бутона за бисквитки във футъра.</p>
+                <p><strong>Предупреждения:</strong> P102: Да се съхранява извън обсега на деца. P262: Да се избягва контакт с очите. При контакт с очите: промийте с вода няколко минути.</p>
+                <p style="font-size: 11px; color: var(--blue-glow);">Информационен лист за безопасност (ИЛБ) се предоставя при поискване на: SoftVision777@gmail.com</p>
             `
         };
 
@@ -2649,38 +947,16 @@ html
         }
 
         function closeLegalModalOnBackdrop(e) {
-            if (e.target.id === 'legalModalOverlay') {
-                closeLegalModal();
-            }
+            if (e.target.id === 'legalModalOverlay') closeLegalModal();
         }
 
         function switchLegalTab(tabKey) {
-            const tabs = ['company', 'terms', 'privacy', 'returns', 'clp', 'cookies'];
-            tabs.forEach(t => {
-                const btn = document.getElementById('tabBtn-' + t);
-                if (btn) btn.classList.remove('active');
+            ['company', 'terms', 'privacy', 'returns', 'clp'].forEach(t => {
+                var btn = document.getElementById('tabBtn-' + t);
+                if (btn) btn.classList.toggle('active', t === tabKey);
             });
-
-            const activeBtn = document.getElementById('tabBtn-' + tabKey);
-            if (activeBtn) activeBtn.classList.add('active');
-
-            const modalBody = document.getElementById('legalModalBody');
-            if (legalTexts[tabKey]) {
-                modalBody.innerHTML = legalTexts[tabKey];
-            }
-
-            const titleMap = {
-                company: 'Идентификация и данни за търговеца',
-                terms: 'Общи условия за ползване и продажба',
-                privacy: 'Политика за поверителност (GDPR)',
-                returns: 'Право на отказ и рекламации',
-                clp: 'Състав и химическа безопасност (CLP)',
-                cookies: 'Политика за бисквитките (Cookies)'
-            };
-            document.getElementById('legalModalTitle').innerHTML = 
-                `<i class="fa-solid fa-scale-balanced" style="color: var(--blue-glow);"></i> ${titleMap[tabKey] || 'Правна информация'}`;
+            document.getElementById('legalModalBody').innerHTML = legalTexts[tabKey] || '';
         }
     </script>
-
 </body>
 </html>
